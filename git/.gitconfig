@@ -1,0 +1,53 @@
+# Identity Info
+[user]
+	name = serneum
+	email = serneum@gmail.com
+
+# Aliases for commands
+[alias]
+	# SVN style abbreviations
+        co  = checkout
+        st  = status
+        di  = diff
+        ci  = commit
+        br  = branch
+        sta = stash
+        chp = cherry-pick --edit
+	# make `gitk` usable like other commands `git k`
+	k = !gitk
+
+# Branching behavior
+[branch]
+        # new branches track parent branch
+        autosetupmerge = always
+[push]
+	# only push the current branch to its upstream branch during `push` operations unless references are listed
+	default = nothing
+
+# Colorize command outputs
+[color]
+	ui = auto
+	diff = auto
+	status = auto
+	branch = auto
+[color "branch"]
+        current = yellow reverse
+        local = yellow
+        remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+ 	old = red bold
+	new = green bold
+[color "status"]
+        added = yellow
+        changed = green
+        untracked = cyan
+[diff]
+	renames = true
+[core]
+	autocrlf = input
+	editor = vim
+	excludesfile = ~/.gitignore
+[http]
+	sslVerify = false

@@ -1,0 +1,43 @@
+#!/bin/bash
+#
+# Requires constants from
+#   source colors
+#   source symbols
+#
+
+
+#
+# function which prints the current git branch name in parrenthesis
+# Branch name is appended with '*' if the workdir is dirty
+# Requires `source symbols`
+#
+function parse_git_branch {
+  git rev-parse --git-dir &>/dev/null || return
+
+  local git_ref git_dirty status_line
+
+  git_ref=$(git symbolic-ref HEAD 2> /dev/null || echo -n "$WARN ")
+  status_line=$(git status 2> /dev/null | tail -n1 ; exit ${PIPESTATUS[0]})
+  [ $? -eq 0 -a "$status_line" == "${status_line/working directory clean/}" ] && git_dirty="*"
+  echo " (${git_ref#refs/heads/}$git_dirty)"
+}
+
+#
+# Change font to purple if current directory is a git working directory, relies on `source colors`
+# otherwise change to blue
+#
+function parse_git_wd_color {
+  git rev-parse --git-dir &> /dev/null && echo -e "$MAGENTA" || echo -e "$BLUE"
+}
+
+# set up PS1 (command prompt) using git detection
+function setup_git_ps1 {
+  #PS1="$GREEN\u@$GREEN\h:$BLUE\w${LYELLOW}\$(parse_git_branch)${RESET_COLOR}\$ "
+  PS1="\[$LGREEN\]\u\[$LCYAN\]@\h:\[\$(parse_git_wd_color)\]\w\[${LYELLOW}\]\$(parse_git_branch)\[${RESET_COLOR}\]\$ "
+}
+
+# set up PROMPT_COMMAND (window title)
+function setup_git_promptcommand {
+  #PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: $(basename $PWD)$(parse_git_branch)\007"'
+  PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}$(parse_git_branch)\007"'
+}

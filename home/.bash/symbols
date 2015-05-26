@@ -1,0 +1,6 @@
+#!/bin/bash
+SKULL=$(echo -en "\xE2\x98\xA0")
+NUKE=$( echo -en "\xE2\x98\xA2")
+BIO=$(  echo -en "\xE2\x98\xA3")
+WARN=$( echo -en "\xE2\x9A\xA0")
+BOLT=$( echo -en "\xE2\x9A\xA1")
