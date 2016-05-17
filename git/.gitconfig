@@ -1,7 +1,7 @@
 # Identity Info
 [user]
-	name = serneum
-	email = serneum@gmail.com
+	name = USER_NAME
+	email = USER_EMAIL
 
 # Aliases for commands
 [alias]
