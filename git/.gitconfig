@@ -51,3 +51,5 @@
 	excludesfile = ~/.gitignore
 [http]
 	sslVerify = false
+[pull]
+	rebase = true
