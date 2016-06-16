@@ -2,6 +2,7 @@
 [user]
 	name = Chris Rees
 	email = crees@covermymeds.com
+	signingkey = 6F97D5CF
 
 # Aliases for commands
 [alias]
@@ -55,3 +56,5 @@
 	sslVerify = false
 [pull]
 	rebase = true
+[commit]
+	gpgsign = true
