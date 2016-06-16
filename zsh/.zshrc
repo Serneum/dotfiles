@@ -55,6 +55,8 @@ plugins=(git zsh-syntax-highlighting history-substring-search)
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
+export GEM_HOME=~/.gem
+export GEM_PATH=~/.gem
 
 source $ZSH/oh-my-zsh.sh
 
@@ -82,6 +84,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ll='ls -alF'
+
+# Vagrant aliases
+alias vssh='vagrant ssh'
+alias vget='~/workspace/vagrant/script/getproject'
+alias cdv='cd ~/workspace/vagrant'
 
 DEFAULT_USER="crees"
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
