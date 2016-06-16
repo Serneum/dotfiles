@@ -1,7 +1,7 @@
 # Identity Info
 [user]
-	name = USER_NAME
-	email = USER_EMAIL
+	name = Chris Rees
+	email = crees@covermymeds.com
 
 # Aliases for commands
 [alias]
