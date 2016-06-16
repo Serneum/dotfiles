@@ -18,3 +18,6 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - [curl -L raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh > ~/.antigen.zsh, Installing Antigen]
+  - if [ ! -d ~/.vim ]; then mkdir ~/.vim; fi
+  - [vundle, Installing Vim plugins]
+  - brew install ag autojump cheat

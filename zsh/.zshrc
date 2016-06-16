@@ -5,7 +5,7 @@ export ZSH=/Users/crees/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+# ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -96,8 +96,11 @@ DEFAULT_USER="crees"
 # Antigen
 source ~/.antigen.zsh
 
+antigen theme agnoster
+
 antigen bundle brew
 antigen bundle brew-cask
 antigen bundle git
+antigen bundle vundle
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
