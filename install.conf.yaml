@@ -11,13 +11,10 @@
     ~/.gitignore: git/.gitignore
     ~/.gitconfig: git/.gitconfig
     ~/.inputrc: zsh/.inputrc
-    ~/.ssh/config: ssh/config
     ~/.vimrc: vim/.vimrc
     ~/.zshrc: zsh/.zshrc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - [curl -L raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh > ~/.antigen.zsh, Installing Antigen]
-  - if [ ! -d ~/.vim ]; then mkdir ~/.vim; fi
-  - [vundle, Installing Vim plugins]
-  - brew install ag autojump cheat
+  - if [[ $OSTYPE == darwin* ]]; then brew install ag autojump cheat tree; fi
