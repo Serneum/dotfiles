@@ -49,7 +49,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting history-substring-search)
+# plugins=(git zsh-syntax-highlighting history-substring-search)
 
 # User configuration
 
@@ -92,5 +92,12 @@ alias vget='~/workspace/vagrant/script/getproject'
 alias cdv='cd ~/workspace/vagrant'
 
 DEFAULT_USER="crees"
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+# Antigen
+source ~/.antigen.zsh
+
+antigen bundle brew
+antigen bundle brew-cask
+antigen bundle git
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-history-substring-search
