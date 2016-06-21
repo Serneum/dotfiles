@@ -4,17 +4,19 @@
 
 - clean: ['~']
 
-- link:
-    ~/.bash: bash/.bash
-    ~/.bashrc: bash/.bashrc
-    ~/.dotfiles: ''
-    ~/.gitignore: git/.gitignore
-    ~/.gitconfig: git/.gitconfig
-    ~/.inputrc: zsh/.inputrc
-    ~/.vimrc: vim/.vimrc
-    ~/.zshrc: zsh/.zshrc
-
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [curl -L raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh > ~/.antigen.zsh, Installing Antigen]
+  - [echo $USER | chsh -s /bin/zsh, Setting shell to ZSH]
   - if [[ $OSTYPE == darwin* ]]; then brew install ag autojump cheat tree; fi
+
+- link:
+    ~/.antigen.zsh: antigen/antigen.zsh
+    ~/.bash: bash/bash
+    ~/.bashrc: bash/bashrc
+    ~/.dotfiles: ''
+    ~/.gitignore: git/gitignore
+    ~/.gitconfig: git/gitconfig
+    ~/.inputrc: zsh/inputrc
+    ~/.oh-my-zsh: oh-my-zsh
+    ~/.vimrc: vim/vimrc
+    ~/.zshrc: zsh/zshrc
