@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/crees/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -91,7 +91,7 @@ alias vssh='vagrant ssh'
 alias vget='~/workspace/vagrant/script/getproject'
 alias cdv='cd ~/workspace/vagrant'
 
-DEFAULT_USER="crees"
+DEFAULT_USER=$USER
 
 # Antigen
 source ~/.antigen.zsh
