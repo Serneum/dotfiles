@@ -6,7 +6,7 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [sudo chsh -s /bin/zsh, Setting shell to ZSH]
+  - [sudo chsh -s /bin/zsh `whoami`, Setting shell to ZSH]
   - if [[ $OSTYPE == darwin* ]]; then brew install ag autojump cheat tree; fi
 
 - link:
