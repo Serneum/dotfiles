@@ -1,10 +1,14 @@
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
+DEFAULT_USER=`whoami`
+
 # User configuration
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-export GEM_HOME=~/.gem
-export GEM_PATH=~/.gem
+if [ $DEFAULT_USER != "vagrant" ]; then
+  export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+  export GEM_HOME=~/.gem
+  export GEM_PATH=~/.gem
+fi
 
 source $ZSH/oh-my-zsh.sh
 
@@ -15,8 +19,6 @@ alias ll='ls -alF'
 alias vssh='vagrant ssh'
 alias vget='~/workspace/vagrant/script/getproject'
 alias cdv='cd ~/workspace/vagrant'
-
-DEFAULT_USER=`whoami`
 
 # Antigen
 source ~/.antigen.zsh
