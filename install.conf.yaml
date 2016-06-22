@@ -6,14 +6,13 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [sudo chsh -s /bin/zsh `whoami`, Setting shell to ZSH]
+  - if [[ $SHELL != "/bin/zsh" ]]; then sudo chsh -s /bin/zsh `whoami`; fi
   - if [[ $OSTYPE == darwin* ]]; then brew install ag autojump cheat tree; fi
 
 - link:
     ~/.antigen.zsh: antigen/antigen.zsh
     ~/.bash: bash/bash
     ~/.bashrc: bash/bashrc
-    ~/.dotfiles: ''
     ~/.gitignore: git/gitignore
     ~/.gitconfig: git/gitconfig
     ~/.inputrc: zsh/inputrc
