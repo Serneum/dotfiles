@@ -4,11 +4,9 @@ export ZSH=~/.oh-my-zsh
 DEFAULT_USER=`whoami`
 
 # User configuration
-if [ $DEFAULT_USER != "vagrant" ]; then
-  export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-  export GEM_HOME=~/.gem
-  export GEM_PATH=~/.gem
-fi
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+export GEM_HOME=~/.gem
+export GEM_PATH=~/.gem
 
 source $ZSH/oh-my-zsh.sh
 
