@@ -1,0 +1,16 @@
+# Antigen
+source ~/.antigen.zsh
+
+antigen use oh-my-zsh
+
+antigen theme agnoster
+
+antigen bundle brew
+antigen bundle brew-cask
+antigen bundle git
+antigen bundle vundle
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-history-substring-search
+
+# Done with Antigen setup
+antigen apply

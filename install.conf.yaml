@@ -27,6 +27,7 @@
     ~/.iterm2: mac/iterm2
     ~/.oh-my-zsh: oh-my-zsh
     ~/.vimrc: vim/vimrc
+    ~/.zsh: zsh
     ~/.zshrc:
       path: zsh/zshrc
       force: true

@@ -1,34 +1,3 @@
-# Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
-
-DEFAULT_USER=`whoami`
-
-# User configuration
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
-export GEM_HOME=~/.gem
-export GEM_PATH=~/.gem
-
-source $ZSH/oh-my-zsh.sh
-
-# Aliases
-alias ll='ls -alF'
-
-# Vagrant aliases
-alias vssh='vagrant ssh'
-alias vget='~/workspace/vagrant/script/getproject'
-alias cdv='cd ~/workspace/vagrant'
-
-# Antigen
-source ~/.antigen.zsh
-
-antigen theme agnoster
-
-antigen bundle brew
-antigen bundle brew-cask
-antigen bundle git
-antigen bundle vundle
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-history-substring-search
-
-# Done with Antigen setup
-antigen apply
+. ~/.zsh/config
+. ~/.zsh/antigen
+. ~/.zsh/aliases

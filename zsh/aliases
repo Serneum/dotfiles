@@ -1,0 +1,35 @@
+# Aliases
+alias ll='ls -alF'
+
+# Git Aliases
+alias ga='git add'
+alias gc='git ci'
+alias gca='git ci --amend'
+alias gd='git diff'
+alias gcm='git ci -m'
+alias gco='git co'
+alias gcob='git co -b'
+alias gl='git pull'
+alias gp='git push'
+alias gr='git rebase'
+alias gra='git rebase --abort'
+alias grc='git rebase --continue'
+alias gri='git rebase -i'
+alias gst='git st'
+alias gsta='git sta'
+
+# Show human friendly numbers and colors
+alias df='df -h'
+alias du='du -h -d 2'
+
+# PS
+alias psa='ps aux'
+alias psg='ps aux | grep'
+
+# Homebrew
+alias brewu='brew update  && brew upgrade --all && brew cleanup && brew prune && brew doctor'
+
+# Vagrant aliases
+alias vssh='vagrant ssh'
+alias vget='~/workspace/vagrant/script/getproject'
+alias cdv='cd ~/workspace/vagrant'

@@ -1,0 +1,16 @@
+# Path to your oh-my-zsh installation.
+export ZSH=~/.oh-my-zsh
+
+DEFAULT_USER=`whoami`
+
+# User configuration
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+if [ $DEFAULT_USER != "vagrant" ]; then
+  export GEM_HOME=~/.gem
+  export GEM_PATH=~/.gem
+fi
+
+fpath=(~/.zsh/functions $fpath)
+autoload -U ~/.zsh/functions/*(:t)
+
+source $ZSH/oh-my-zsh.sh
