@@ -23,7 +23,6 @@
     ~/.bashrc: bash/bashrc
     ~/.gitignore: git/gitignore
     ~/.gitconfig: git/gitconfig
-    ~/.inputrc: zsh/inputrc
     ~/.iterm2: mac/iterm2
     ~/.oh-my-zsh: oh-my-zsh
     ~/.vimrc: vim/vimrc
