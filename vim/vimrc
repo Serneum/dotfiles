@@ -74,6 +74,8 @@ Plugin 'tpope/vim-endwise'
 " All plugins defined
 call vundle#end()
 
+" Silver Searcher
+let g:ackprg = 'ag --vimgrep'
 
 " Ruby, JS, Elixir file settings
 au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex                 set tabstop=2
