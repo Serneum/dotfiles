@@ -27,12 +27,19 @@ alias psa='ps aux'
 alias psg='ps aux | grep'
 
 # Homebrew
-alias brewu='brew update  && brew upgrade --all && brew cleanup && brew prune && brew doctor'
+if [[ $OSTYPE == darwin* ]]; then
+  alias brewu='brew update  && brew upgrade --all && brew cleanup && brew prune && brew doctor'
+fi
 
 # Vagrant aliases
 alias vssh='vagrant ssh'
 alias vget='~/workspace/vagrant/script/getproject'
 alias cdv='cd ~/workspace/vagrant'
+alias cdvc='cd ~/workspace/vagrant/code'
+alias vbe='vr bundle exec'
+
+# Ruby/Rails
+alias be='bundle exec'
 
 # Tmate
 alias tmlink="tmate show-messages | tail -1 | cut -d' ' -f9- | pbcopy"
