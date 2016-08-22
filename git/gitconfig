@@ -25,7 +25,7 @@
         autosetuprebase = always
 [push]
 	# only push the current branch to its upstream branch during `push` operations unless references are listed
-	default = nothing
+	default = current
 
 # Colorize command outputs
 [color]
