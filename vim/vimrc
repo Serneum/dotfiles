@@ -78,6 +78,7 @@ call vundle#end()
 let g:ackprg = 'ag --vimgrep'
 
 " Ruby, JS, Elixir file settings
+autocmd BufNewFile,BufRead Gemfile set filetype=ruby
 au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex                 set tabstop=2
 au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex                 set softtabstop=2
 au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex                 set shiftwidth=2
