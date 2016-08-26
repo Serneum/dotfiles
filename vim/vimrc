@@ -25,6 +25,10 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 't9md/vim-ruby-xmpfilter'
 Plugin 'tpope/vim-rails'
 
+" Elixir
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'slashmili/alchemist.vim'
+
 " Xmpfilter
 autocmd FileType ruby nmap <buffer> <D-m> <Plug>(xmpfilter-mark)
 autocmd FileType ruby xmap <buffer> <D-m> <Plug>(xmpfilter-mark)
@@ -79,6 +83,7 @@ let g:ackprg = 'ag --vimgrep'
 
 " Ruby, JS, Elixir file settings
 autocmd BufNewFile,BufRead Gemfile set filetype=ruby
+autocmd BufNewFile,BufRead *.ex,*.exs set filetype=elixir
 au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex                 set tabstop=2
 au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex                 set softtabstop=2
 au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex                 set shiftwidth=2
