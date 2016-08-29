@@ -1,7 +1,6 @@
 " Required
 set nocompatible
 filetype off
-syntax enable
 
 " Show line numbers
 set number
@@ -78,12 +77,14 @@ Plugin 'tpope/vim-endwise'
 " All plugins defined
 call vundle#end()
 
+" Required
+filetype plugin indent on
+syntax enable
+
 " Silver Searcher
 let g:ackprg = 'ag --vimgrep'
 
 " Ruby, JS, Elixir file settings
-autocmd BufNewFile,BufRead Gemfile set filetype=ruby
-autocmd BufNewFile,BufRead *.ex,*.exs set filetype=elixir
 au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex                 set tabstop=2
 au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex                 set softtabstop=2
 au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex                 set shiftwidth=2
