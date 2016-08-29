@@ -74,6 +74,10 @@ autocmd VimEnter * if argc() | wincmd p | endif
 " End wise
 Plugin 'tpope/vim-endwise'
 
+" IndentLine
+Plugin 'Yggdroot/indentLine'
+let g:indentLine_char = '|'
+
 " All plugins defined
 call vundle#end()
 
