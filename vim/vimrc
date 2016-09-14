@@ -78,15 +78,17 @@ Plugin 'tpope/vim-endwise'
 Plugin 'Yggdroot/indentLine'
 let g:indentLine_char = '|'
 
+" Ack
+Plugin 'mileszs/ack.vim'
+" Silver Searcher
+let g:ackprg = 'ag --vimgrep'
+
 " All plugins defined
 call vundle#end()
 
 " Required
 filetype plugin indent on
 syntax enable
-
-" Silver Searcher
-let g:ackprg = 'ag --vimgrep'
 
 " Ruby, JS, Elixir file settings
 au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex                 set tabstop=2
