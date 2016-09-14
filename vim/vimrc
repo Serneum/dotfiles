@@ -8,6 +8,10 @@ set number
 " Backspace like a normal person
 set backspace=indent,eol,start
 
+" Show tabs and newlines
+set listchars=tab:▸\ ,eol:¬
+set list
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -77,6 +81,8 @@ Plugin 'tpope/vim-endwise'
 " IndentLine
 Plugin 'Yggdroot/indentLine'
 let g:indentLine_char = '|'
+let g:indentLine_leadingSpaceEnabled = 1
+let g:indentLine_leadingSpaceChar = '·'
 
 " Ack
 Plugin 'mileszs/ack.vim'
