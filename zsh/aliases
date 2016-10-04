@@ -43,3 +43,6 @@ alias be='bundle exec'
 
 # Tmate
 alias tmlink="tmate show-messages | tail -1 | cut -d' ' -f9- | pbcopy"
+
+# Spacemacs
+alias e="emacs -nw"

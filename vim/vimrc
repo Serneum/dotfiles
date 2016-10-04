@@ -18,10 +18,11 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Solarized Theme
-Bundle 'altercation/vim-colors-solarized'
-set background=dark
-set rtp+=~/.vim/bundle/vim-colors-solarized
-colorscheme solarized
+" Bundle 'altercation/vim-colors-solarized'
+" set rtp+=~/.vim/bundle/vim-colors-solarized
+
+" Jellybeans Theme
+Plugin 'nanotech/jellybeans.vim'
 
 " Ruby
 Plugin 'vim-ruby/vim-ruby'
@@ -91,6 +92,10 @@ let g:ackprg = 'ag --vimgrep'
 
 " All plugins defined
 call vundle#end()
+
+" Set color scheme
+set background=dark
+colorscheme jellybeans
 
 " Required
 filetype plugin indent on
