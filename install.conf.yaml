@@ -19,15 +19,20 @@
   -
     command: sudo pip install ./powerline
     stdout: true
+  -
+    command: sudo pip install ./powerline-gitstatus
+    stdout: true
+  -
+    command: if [ ! -d ~/.config ]; then mkdir ~/.config; fi
 
 - link:
     ~/.antigen.zsh: antigen/antigen.zsh
     ~/.bash: bash/bash
     ~/.bashrc: bash/bashrc
+    ~/.config/powerline: config/powerline
     ~/.gitignore: git/gitignore
     ~/.gitconfig: git/gitconfig
     ~/.iterm2: mac/iterm2
-    #    ~/.oh-my-zsh: oh-my-zsh
     ~/.spacemacs: emacs/spacemacs
     ~/.tmate.conf: cmm/tmate.conf
     ~/.vimrc: vim/vimrc
