@@ -5,6 +5,7 @@ source ~/.antigen.zsh
 
 # antigen theme agnoster
 
+antigen bundle autojump
 antigen bundle brew
 antigen bundle brew-cask
 antigen bundle git
