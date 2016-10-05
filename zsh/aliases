@@ -1,5 +1,7 @@
 # Aliases
-alias ll='ls -alF'
+alias cd..='cd ..'
+alias ll='ls -alFG'
+alias ls='ls -G'
 
 # Git Aliases
 alias ga='git add'
