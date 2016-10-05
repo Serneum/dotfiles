@@ -1,5 +1,6 @@
 # Aliases
 alias cd..='cd ..'
+alias grep='grep --color=auto'
 alias ll='ls -alFG'
 alias ls='ls -G'
 
