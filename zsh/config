@@ -1,6 +1,7 @@
 # Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
+# export ZSH=~/.oh-my-zsh
 
+unset ZSH_THEME
 DEFAULT_USER=`whoami`
 
 # User configuration
@@ -13,7 +14,7 @@ fi
 fpath=(~/.zsh/functions $fpath)
 autoload -U ~/.zsh/functions/*(:t)
 
-source $ZSH/oh-my-zsh.sh
+#source $ZSH/oh-my-zsh.sh
 
 TERM_INFO_PREFIX=
 if [[ $OSTYPE != darwin* ]]; then
@@ -25,3 +26,7 @@ bindkey "$terminfo[${TERM_INFO_PREFIX}cud1]" history-substring-search-down
 
 # Fix autojump
 if [[ $OSTYPE == darwin* ]]; then [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh; fi
+
+# Install Powerline
+powerline-daemon -q
+. ~/.dotfiles/powerline/powerline/bindings/zsh/powerline.zsh

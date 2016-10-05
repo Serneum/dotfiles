@@ -1,9 +1,9 @@
 # Antigen
 source ~/.antigen.zsh
 
-antigen use oh-my-zsh
+# antigen use oh-my-zsh
 
-antigen theme agnoster
+# antigen theme agnoster
 
 antigen bundle brew
 antigen bundle brew-cask

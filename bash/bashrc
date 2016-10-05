@@ -99,9 +99,14 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-source ~/.bash/colors
-source ~/.bash/symbols
-source ~/.bash/gitprompt
+# source ~/.bash/colors
+# source ~/.bash/symbols
+# source ~/.bash/gitprompt
+
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+source ~/.dotfiles/powerline/powerline/bindings/bash/powerline.sh
 
 setup_git_ps1
 
