@@ -14,8 +14,6 @@ fi
 fpath=(~/.zsh/functions $fpath)
 autoload -U ~/.zsh/functions/*(:t)
 
-#source $ZSH/oh-my-zsh.sh
-
 TERM_INFO_PREFIX=
 if [[ $OSTYPE != darwin* ]]; then
   TERM_INFO_PREFIX=k

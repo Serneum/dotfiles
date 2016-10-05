@@ -1,13 +1,12 @@
 # Antigen
 source ~/.antigen.zsh
 
-# antigen use oh-my-zsh
-
-# antigen theme agnoster
+if [[ $OSTYPE == darwin* ]]; then
+  antigen bundle brew
+  antigen bundle cask
+fi
 
 antigen bundle autojump
-antigen bundle brew
-antigen bundle brew-cask
 antigen bundle git
 antigen bundle vundle
 antigen bundle zsh-users/zsh-syntax-highlighting
