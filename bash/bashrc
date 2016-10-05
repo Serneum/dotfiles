@@ -102,13 +102,12 @@ fi
 # source ~/.bash/colors
 # source ~/.bash/symbols
 # source ~/.bash/gitprompt
+# setup_git_ps1
 
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
 source ~/.dotfiles/powerline/powerline/bindings/bash/powerline.sh
-
-setup_git_ps1
 
 PATH=$PATH:/opt/remote-desktop:/opt/vpn:/opt/jslint:/opt/git
 export PATH
