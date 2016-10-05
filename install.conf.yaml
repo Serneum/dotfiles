@@ -17,7 +17,7 @@
     command: if [[ $OSTYPE == darwin* ]]; then brew install ag autojump cheat git keybase tree gpg python; fi
     stdout: true
 
-    command: pip install ./powerline
+    command: sudo pip install ./powerline
     stdout: true
 
 - link:
