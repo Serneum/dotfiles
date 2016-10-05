@@ -28,5 +28,5 @@ bindkey "$terminfo[${TERM_INFO_PREFIX}cud1]" history-substring-search-down
 if [[ $OSTYPE == darwin* ]]; then [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh; fi
 
 # Install Powerline
-powerline-daemon -q
+~/.dotfiles/powerline/scripts/powerline-daemon -q
 . ~/.dotfiles/powerline/powerline/bindings/zsh/powerline.zsh
