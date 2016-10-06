@@ -3,7 +3,6 @@ source ~/.antigen.zsh
 
 if [[ $OSTYPE == darwin* ]]; then
   antigen bundle brew
-  antigen bundle cask
 fi
 
 antigen bundle autojump
