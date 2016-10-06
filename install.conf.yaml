@@ -17,10 +17,12 @@
     command: if [[ $OSTYPE == darwin* ]]; then brew install ag cask cheat git gpg keybase python tree; fi
     stdout: true
   -
-    command: sudo pip install ./powerline
+    command: ./powerline/fonts/install.sh
+  -
+    command: sudo pip install ./powerline/powerline
     stdout: true
   -
-    command: sudo pip install ./powerline-gitstatus
+    command: sudo pip install ./powerline/powerline-gitstatus
     stdout: true
   -
     command: if [ ! -d ~/.config ]; then mkdir ~/.config; fi
@@ -29,7 +31,7 @@
     ~/.antigen.zsh: antigen/antigen.zsh
     ~/.bash: bash/bash
     ~/.bashrc: bash/bashrc
-    ~/.config/powerline: config/powerline
+    ~/.config/powerline: powerline/config/powerline
     ~/.gitignore: git/gitignore
     ~/.gitconfig: git/gitconfig
     ~/.iterm2: mac/iterm2

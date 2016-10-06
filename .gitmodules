@@ -7,12 +7,15 @@
 [submodule "antigen"]
 	path = antigen
 	url = https://github.com/zsh-users/antigen.git
-[submodule "powerline"]
-	path = powerline
-	url = git@github.com:powerline/powerline.git
 [submodule "zsh/zsh-autosuggestions"]
 	path = zsh/zsh-autosuggestions
 	url = git://github.com/zsh-users/zsh-autosuggestions
-[submodule "powerline-gitstatus"]
-	path = powerline-gitstatus
+[submodule "powerline/powerline"]
+	path = powerline/powerline
+	url = git@github.com:powerline/powerline.git
+[submodule "powerline/fonts"]
+	path = powerline/fonts
+	url = git@github.com:powerline/fonts.git
+[submodule "powerline/powerline-gitstatus"]
+	path = powerline/powerline-gitstatus
 	url = git@github.com:jaspernbrouwer/powerline-gitstatus.git
