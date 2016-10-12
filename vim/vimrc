@@ -3,7 +3,11 @@ set nocompatible
 filetype off
 
 " Show line numbers
-set number
+set number relativenumber
+
+" Set normal line numbers when in insert mode
+autocmd InsertEnter * :set number norelativenumber
+autocmd InsertLeave * :set number relativenumber
 
 " Backspace like a normal person
 set backspace=indent,eol,start
@@ -16,10 +20,6 @@ set list
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-
-" Solarized Theme
-" Bundle 'altercation/vim-colors-solarized'
-" set rtp+=~/.vim/bundle/vim-colors-solarized
 
 " Jellybeans Theme
 Plugin 'nanotech/jellybeans.vim'
@@ -89,6 +89,9 @@ let g:indentLine_leadingSpaceChar = '·'
 Plugin 'mileszs/ack.vim'
 " Silver Searcher
 let g:ackprg = 'ag --vimgrep'
+
+" Relative line numbers
+Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 
 " All plugins defined
 call vundle#end()
