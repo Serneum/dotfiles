@@ -65,6 +65,8 @@ xterm*|rxvt*)
     ;;
 esac
 
+source ~/.dotfiles/zsh/aliases
+
 # enable color support of ls and also add handy aliases
 alias ls='ls -G'
 #alias dir='dir --color=auto'
@@ -107,7 +109,7 @@ fi
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
-source ~/.dotfiles/powerline/powerline/bindings/bash/powerline.sh
+source ~/.dotfiles/powerline/powerline/powerline/bindings/bash/powerline.sh
 
 PATH=$PATH:/opt/remote-desktop:/opt/vpn:/opt/jslint:/opt/git
 export PATH
