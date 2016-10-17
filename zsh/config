@@ -28,6 +28,12 @@ powerline-daemon -q
 # Add autosuggestions
 source ~/.dotfiles/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# Add ssh identity
+ssh-add -L &> /dev/null
+if [ $? -eq 1 ]; then
+  ssh-add
+fi
+
 # Command history configuration
 if [ -z "$HISTFILE" ]; then
     HISTFILE=$HOME/.zsh_history
