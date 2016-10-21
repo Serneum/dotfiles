@@ -1,8 +1,14 @@
 # Aliases
 alias cd..='cd ..'
 alias grep='grep --color=auto'
-alias ll='ls -alFG'
-alias ls='ls -G'
+
+if [[ $OSTYPE == darwin* ]]; then
+  alias ll='ls -alFG'
+  alias ls='ls -G'
+else
+  alias ll='ls -alF --color'
+  alias ls='ls --color'
+fi
 
 # Git Aliases
 alias ga='git add'
