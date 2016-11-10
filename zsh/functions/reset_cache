@@ -1,0 +1,3 @@
+function reset_cache() {
+  sudo killall -HUP mDNSResponder
+}
