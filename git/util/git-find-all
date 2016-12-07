@@ -1,0 +1,42 @@
+#!/bin/bash
+
+declare SORT_NULL
+declare PRINT="-print"
+
+while getopts 0 OPTION
+do
+    case "$OPTION" in
+        0)    SORT_NULL="-z"
+            PRINT="-print0"
+            ;;
+        ?)    print >&2 "Usage: $0 [-0]"
+            exit 1
+            ;;
+    esac
+done
+shift $((OPTIND-1))
+
+FIND_OPTS=""
+SORT="sort --ignore-case --dictionary-order $SORT_NULL"
+if [ `uname` = Darwin ]
+then
+    # mac has built in option for find be sorted
+    FIND_OPTS=-s
+    SORT=cat
+#else
+    #echo linux
+fi
+
+
+declare -a SEARCH_PATHS
+SEARCH_PATHS=( . )
+if [ "$#" -ne 0 ]
+then
+    SEARCH_PATHS=( "$@" )
+fi
+
+# find and print all git repositories in the current directoy (relative path)
+find $FIND_OPTS "${SEARCH_PATHS[@]}" -type d \( -iname '*.git' -or -exec test -d '{}/.git' \; \) \
+        $PRINT -prune | $SORT
+
+

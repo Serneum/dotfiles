@@ -1,0 +1,30 @@
+#!/bin/bash
+
+export GIT_PAGER=cat;
+
+if [ $# -eq '0' ]
+then
+    echo >&2 no command given
+    exit 1
+fi
+
+function doSh {
+    local dir=$1
+    shift # pop directory argument
+    source ~/.bash/colors
+    cd "$dir"
+    echo -e "${MAGENTA}${dir}${RESET_COLOR}"
+    "$@"
+    cd - >/dev/null # switch back to old directory
+}
+
+# locate each git repository, print the pwd and execute given git command within
+git find-all | while read LINE
+do
+    doSh "$LINE" "$@"
+done
+
+#export -f doSh
+#git find-all -0 | \
+#        xargs -0 -n 1 -I '{}' bash -c 'doSh "$@"' - '{}' "$@"
+
