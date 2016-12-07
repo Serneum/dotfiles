@@ -80,10 +80,10 @@ autocmd VimEnter * if argc() | wincmd p | endif
 Plugin 'tpope/vim-endwise'
 
 " IndentLine
-Plugin 'Yggdroot/indentLine'
-let g:indentLine_char = '|'
-let g:indentLine_leadingSpaceEnabled = 1
-let g:indentLine_leadingSpaceChar = '·'
+" Plugin 'Yggdroot/indentLine'
+" let g:indentLine_char = '|'
+" let g:indentLine_leadingSpaceEnabled = 1
+" let g:indentLine_leadingSpaceChar = '·'
 
 " Ack
 Plugin 'mileszs/ack.vim'
@@ -93,8 +93,24 @@ let g:ackprg = 'ag --vimgrep'
 " Relative line numbers
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 
+" Incsearch
+Plugin 'haya14busa/incsearch.vim'
+
 " All plugins defined
 call vundle#end()
+
+" Set incsearch settings
+set hlsearch
+let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
+
+" Ctags
+nnoremap <leader>. :CtrlPTag<cr>
 
 " Set color scheme
 set background=dark
