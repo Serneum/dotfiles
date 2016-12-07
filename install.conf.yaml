@@ -14,7 +14,7 @@
     command: if [[ $OSTYPE == darwin* ]] && ! which brew &>/dev/null; then /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; fi
     stdout: true
   -
-    command: if [[ $OSTYPE == darwin* ]]; then brew install ag cheat git gpg keybase python tree; fi
+    command: if [[ $OSTYPE == darwin* ]]; then brew install ag cheat ctags git gpg keybase python tree; fi
     stdout: true
   -
     command: ./powerline/fonts/install.sh
@@ -26,6 +26,8 @@
     stdout: true
   -
     command: if [ ! -d ~/.config ]; then mkdir ~/.config; fi
+  -
+    command: if [ ! -d ~/.git_template ]; then mkdir ~/.git_template; fi
 
 - link:
     ~/.antigen.zsh: antigen/antigen.zsh
@@ -34,6 +36,7 @@
     ~/.config/powerline: powerline/config/powerline
     ~/.gitignore: git/gitignore
     ~/.gitconfig: git/gitconfig
+    ~/.git_template/hooks: git/hooks
     ~/.iterm2: mac/iterm2
     ~/.spacemacs: emacs/spacemacs
     ~/.tmate.conf: cmm/tmate.conf
@@ -42,3 +45,6 @@
     ~/.zshrc:
       path: zsh/zshrc
       force: true
+    /usr/local/bin/git-each: git/util/git-each
+    /usr/local/bin/git-eachsh: git/util/git-eachsh
+    /usr/local/bin/git-find-all: git/util/git-find-all
