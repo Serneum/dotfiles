@@ -110,6 +110,7 @@ map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
 
 " Ctags
+:set tags=./tags,tags
 nnoremap <leader>. :CtrlPTag<cr>
 
 " Set color scheme

@@ -3,3 +3,5 @@
 .idea/
 *.swp
 *.swo
+*.swn
+tags
