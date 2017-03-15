@@ -29,6 +29,9 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 't9md/vim-ruby-xmpfilter'
 Plugin 'tpope/vim-rails'
 
+" Coffeescript
+Plugin 'kchmck/vim-coffee-script'
+
 " Elixir
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'slashmili/alchemist.vim'
@@ -122,12 +125,12 @@ filetype plugin indent on
 syntax enable
 
 " Ruby, JS, Elixir file settings
-au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex                 set tabstop=2
-au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex                 set softtabstop=2
-au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex                 set shiftwidth=2
-au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex                 set expandtab
-au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex                 set smarttab
-au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex                 set autoindent
+au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee                set tabstop=2
+au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee                set softtabstop=2
+au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee                set shiftwidth=2
+au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee                set expandtab
+au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee                set smarttab
+au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee                set autoindent
 au BufRead,BufNewFile *.rb                                       match Error /\%81v.\+/
 
 au BufRead,BufNewFile *.rb                                       match BadWhitespace /^\t\+/
