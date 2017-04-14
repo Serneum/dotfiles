@@ -1,4 +1,7 @@
 function vr() {
-  repo=/pub/$(<.enviro)/current
-  vagrant ssh -c "cd $repo && $*"
+  project=${PWD##*/}
+  vagrant ssh -c "cd /pub/$project/current && $*"
+  if [ $? -ne 0 ]; then
+    vagrant ssh -c "cd /vagrant/code/$project && $*"
+  fi
 }
