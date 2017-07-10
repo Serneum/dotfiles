@@ -37,6 +37,7 @@ Plugin 'kchmck/vim-coffee-script'
 " Elixir
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'slashmili/alchemist.vim'
+Bundle 'slime-lang/vim-slime-syntax.git'
 
 " Xmpfilter
 autocmd FileType ruby nmap <buffer> <D-m> <Plug>(xmpfilter-mark)
@@ -125,6 +126,9 @@ colorscheme jellybeans
 " Required
 filetype plugin indent on
 syntax enable
+
+" Set up Slime to work with .slim files
+autocmd BufNewFile,BufRead *.slim set filetype=slime
 
 " Ruby, JS, Elixir file settings
 au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee                set tabstop=2
