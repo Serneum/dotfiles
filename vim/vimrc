@@ -131,13 +131,13 @@ syntax enable
 autocmd BufNewFile,BufRead *.slim set filetype=slime
 
 " Ruby, JS, Elixir file settings
-au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee                set tabstop=2
-au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee                set softtabstop=2
-au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee                set shiftwidth=2
-au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee                set expandtab
-au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee                set smarttab
-au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee                set autoindent
-au BufRead,BufNewFile *.rb                                       match Error /\%81v.\+/
+au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim         set tabstop=2
+au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim         set softtabstop=2
+au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim         set shiftwidth=2
+au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim         set expandtab
+au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim         set smarttab
+au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim         set autoindent
+au BufRead,BufNewFile *.rb                                               match Error /\%81v.\+/
 
-au BufRead,BufNewFile *.rb                                       match BadWhitespace /^\t\+/
-au BufRead,BufNewFile *.rb                                       match BadWhitespace /\s\+$/
+au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim         match BadWhitespace /^\t\+/
+au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim         match BadWhitespace /\s\+$/
