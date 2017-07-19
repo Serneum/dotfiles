@@ -74,6 +74,7 @@ let g:syntastic_check_on_wq = 0
 " CtrlP
 Plugin 'ctrlpvim/ctrlp.vim'
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+set wildignore+=*/vendor/bundle/*
 
 " Nerd Tree
 Plugin 'scrooloose/nerdtree.git'
