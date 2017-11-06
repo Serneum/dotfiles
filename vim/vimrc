@@ -23,6 +23,9 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
+" WakaTime
+Plugin 'wakatime/vim-wakatime'
+
 " Jellybeans Theme
 Plugin 'nanotech/jellybeans.vim'
 
