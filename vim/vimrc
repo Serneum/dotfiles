@@ -12,6 +12,9 @@ autocmd InsertLeave * :set number relativenumber
 " Backspace like a normal person
 set backspace=indent,eol,start
 
+" Allow yank to go to system clipboard
+set clipboard=unnamed
+
 " Show tabs and newlines
 set listchars=tab:▸\ ,eol:¬
 set list
