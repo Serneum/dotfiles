@@ -49,6 +49,7 @@ alias vbe='vr bundle exec'
 
 # Ruby/Rails
 alias be='bundle exec'
+alias ber='bundle exec rspec'
 
 # Tmate
 alias tmlink="tmate show-messages | tail -1 | cut -d' ' -f9- | pbcopy"
