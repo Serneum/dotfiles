@@ -113,6 +113,8 @@ Plugin 'ludovicchabant/vim-gutentags'
 " All plugins defined
 call vundle#end()
 
+set statusline+=%{gutentags#statusline()}
+
 " Set incsearch settings
 set hlsearch
 let g:incsearch#auto_nohlsearch = 1
