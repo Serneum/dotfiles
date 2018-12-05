@@ -26,8 +26,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
-" Jellybeans Theme
-Plugin 'nanotech/jellybeans.vim'
+" Dracula Theme
+Plugin 'dracula/vim'
 
 " Ruby
 Plugin 'vim-ruby/vim-ruby'
@@ -41,6 +41,10 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'slashmili/alchemist.vim'
 Bundle 'slime-lang/vim-slime-syntax.git'
+
+" Add the fzf.vim plugin to wrap fzf:
+Plugin 'junegunn/fzf.vim'
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 " Xmpfilter
 autocmd FileType ruby nmap <buffer> <D-m> <Plug>(xmpfilter-mark)
@@ -75,15 +79,15 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " CtrlP
-Plugin 'ctrlpvim/ctrlp.vim'
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-let g:ctrlp_custom_ignore = '\v[\/](build|_build|deps|node_modules|target|dist|bundle|vendor)|(\.(swp|ico|git|svn))$'
-if executable('ag')
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-endif
+" Plugin 'ctrlpvim/ctrlp.vim'
+" set runtimepath^=~/.vim/bundle/ctrlp.vim
+" let g:ctrlp_custom_ignore = '\v[\/](build|_build|deps|node_modules|target|dist|bundle|vendor)|(\.(swp|ico|git|svn))$'
+" if executable('ag')
+"   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+"   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+"   " ag is fast enough that CtrlP doesn't need to cache
+"   let g:ctrlp_use_caching = 0
+" endif
 
 " Nerd Tree
 Plugin 'scrooloose/nerdtree.git'
@@ -94,9 +98,6 @@ autocmd VimEnter * if argc() | wincmd p | endif
 
 " End wise
 Plugin 'tpope/vim-endwise'
-
-" Ack
-Plugin 'mileszs/ack.vim'
 
 " Silver Searcher
 let g:ackprg = 'ag --vimgrep'
@@ -128,8 +129,10 @@ map g# <Plug>(incsearch-nohl-g#)
 nnoremap <leader>. :CtrlPTag<cr>
 
 " Set color scheme
-set background=dark
-colorscheme jellybeans
+let g:dracula_colorterm=0
+let g:dracula_italic = 0
+colorscheme dracula
+highlight Normal ctermbg=None
 
 " Required
 filetype plugin indent on

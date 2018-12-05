@@ -14,7 +14,7 @@
     command: if [[ $OSTYPE == darwin* ]] && ! which brew &>/dev/null; then /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; fi
     stdout: true
   -
-    command: if [[ $OSTYPE == darwin* ]]; then brew install ag cheat git gpg keybase python tree; fi
+    command: if [[ $OSTYPE == darwin* ]]; then brew install ag cheat git gpg keybase python tree ripgrep fzf; fi
     stdout: true
   -
     command: if [[ $OSTYPE == darwin* ]]; then brew install --HEAD universal-ctags/universal-ctags/universal-ctags; fi
