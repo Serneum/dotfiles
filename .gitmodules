@@ -19,3 +19,6 @@
 [submodule "iterm"]
 	path = iterm
 	url = https://github.com/dracula/iterm.git
+[submodule "github_assistant"]
+	path = github_assistant
+	url = git@git.innova-partners.com:fflores/github_assistant.git
