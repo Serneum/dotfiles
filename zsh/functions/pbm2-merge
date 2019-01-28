@@ -1,0 +1,33 @@
+function pbm2-merge() {
+  # stop executing if any command errors out
+  set -e
+
+  # set this to pbm2 or integration
+  UPDATE_BRANCH="pbm2"
+  CURRENT_BRANCH=$(git symbolic-ref HEAD | sed 's!refs\/heads\/!!')
+
+  echo "$CURRENT_BRANCH -> $UPDATE_BRANCH"
+
+  if git show-ref --quiet refs/heads/$UPDATE_BRANCH; then
+      echo '$UPDATE_BRANCH branch exists - removing it'
+      git branch -D $UPDATE_BRANCH
+  fi
+
+  # get updated remote data
+  git fetch
+
+  # move to $UPDATE_BRANCH
+  git checkout -b $UPDATE_BRANCH origin/$UPDATE_BRANCH
+
+  # merge the captured branch name
+  git merge $CURRENT_BRANCH -m "Merge branch '$CURRENT_BRANCH' into $UPDATE_BRANCH"
+
+  # push to remote server
+  git push origin $UPDATE_BRANCH
+
+  # move back to original branch
+  git checkout $CURRENT_BRANCH
+
+  # delete local $UPDATE_BRANCH branch
+  git branch -D $UPDATE_BRANCH
+}
