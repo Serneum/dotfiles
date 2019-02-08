@@ -27,9 +27,6 @@ if [[ $OSTYPE == darwin* ]]; then [[ -s `brew --prefix`/etc/autojump.sh ]] && . 
 powerline-daemon -q
 . ~/.dotfiles/powerline/powerline/powerline/bindings/zsh/powerline.zsh
 
-# Add autosuggestions
-source ~/.dotfiles/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 # Add ssh identity
 ssh-add -L &> /dev/null
 if [ $? -eq 1 ]; then
