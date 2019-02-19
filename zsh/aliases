@@ -26,6 +26,7 @@ alias grc='git rebase --continue'
 alias gri='git rebase -i'
 alias gst='git st'
 alias gsta='git sta'
+alias glog='git log'
 alias gbpurge='git branch --merged | grep -v "\*" | grep -v "master" | grep -v "develop" | grep -v "staging" | xargs -n 1 git branch -d'
 
 # Show human friendly numbers and colors
