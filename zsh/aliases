@@ -3,8 +3,10 @@ alias cd..='cd ..'
 alias grep='grep --color=auto'
 
 if [[ $OSTYPE == darwin* ]]; then
-  alias ll='ls -alFG'
-  alias ls='ls -G'
+  alias ll='colorls -Al --gs'
+  alias ls='colorls --gs'
+  # alias ll='ls -alFG'
+  # alias ls='ls -G'
 else
   alias ll='ls -alF --color'
   alias ls='ls --color'

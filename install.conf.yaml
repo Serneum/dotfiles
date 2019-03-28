@@ -20,6 +20,12 @@
     command: if [[ $OSTYPE == darwin* ]]; then brew install --HEAD universal-ctags/universal-ctags/universal-ctags; fi
     stdout: true
   -
+    command: if [[ $OSTYPE == darwin* ]]; then brew tap caskroom/fonts; fi
+    stdout: true
+  -
+    command: if [[$OSTYPE == darwin* ]]; then brew cask install font-hack-nerd-font; fi
+    stdout: true
+  -
     command: ./powerline/fonts/install.sh
   -
     command: sudo pip install ./powerline/powerline
@@ -37,6 +43,7 @@
     ~/.bash: bash/bash
     ~/.bashrc: bash/bashrc
     ~/.config/powerline: powerline/config/powerline
+    ~/.config/colorls/dark_colors.yaml: zsh/colorls/dark_colors.yml
     ~/.gitignore: git/gitignore
     ~/.gitconfig: git/gitconfig
     ~/.git_template/hooks: git/hooks
