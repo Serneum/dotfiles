@@ -45,6 +45,11 @@ Bundle 'slime-lang/vim-slime-syntax.git'
 " Add the fzf.vim plugin to wrap fzf:
 Plugin 'junegunn/fzf.vim'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+let g:fzf_files_options =
+      \ '--reverse ' .
+      \ '--preview-window top:60% ' .
+      \ '--preview "(bat --color "always" {} || cat {}) 2> /dev/null | head -'
+      \ . &lines . '"'
 
 " Xmpfilter
 autocmd FileType ruby nmap <buffer> <D-m> <Plug>(xmpfilter-mark)
