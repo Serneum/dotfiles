@@ -1,0 +1,3 @@
+function shovel() {
+  cd ~/dev && ./script/run shovel "$@"
+}
