@@ -14,18 +14,6 @@
     command: if [[ $OSTYPE == darwin* ]] && ! which brew &>/dev/null; then /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; fi
     stdout: true
   -
-    command: if [[ $OSTYPE == darwin* ]]; then brew install ag cheat git gpg keybase python tree ripgrep fzf fd getantibody/tap/antibody; fi
-    stdout: true
-  -
-    command: if [[ $OSTYPE == darwin* ]]; then brew install --HEAD universal-ctags/universal-ctags/universal-ctags; fi
-    stdout: true
-  -
-    command: if [[ $OSTYPE == darwin* ]]; then brew tap caskroom/fonts; fi
-    stdout: true
-  -
-    command: if [[$OSTYPE == darwin* ]]; then brew cask install font-hack-nerd-font; fi
-    stdout: true
-  -
     command: ./powerline/fonts/install.sh
   -
     command: sudo pip install ./powerline/powerline
@@ -38,15 +26,15 @@
   -
     command: if [ ! -d ~/.git_template ]; then mkdir ~/.git_template; fi
 
+- brewfile:
+    - homebrew/Brewfile
+
 - link:
-    ~/.antigen.zsh: antigen/antigen.zsh
     ~/.bash: bash/bash
     ~/.bashrc: bash/bashrc
     ~/.config/powerline: powerline/config/powerline
-    ~/.config/colorls/dark_colors.yaml: zsh/colorls/dark_colors.yml
     ~/.gitignore: git/gitignore
     ~/.gitconfig: git/gitconfig
-    ~/.git_template/hooks: git/hooks
     ~/.iterm2: mac/iterm2
     ~/.spacemacs: emacs/spacemacs
     ~/.tmate.conf: cmm/tmate.conf

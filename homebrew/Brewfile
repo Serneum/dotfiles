@@ -1,0 +1,16 @@
+brew 'ag'
+brew 'cheat'
+brew 'fd'
+brew 'fzf'
+brew 'getantibody/tap/antibody'
+brew 'git'
+brew 'gpg'
+brew 'python'
+brew 'ripgrep'
+brew 'tree'
+brew 'universal-ctags/universal-ctags/universal-ctags'
+
+cask 'font-hack-nerd-font'
+cask 'keybase'
+
+tap 'caskroom/fonts'
