@@ -39,6 +39,9 @@
     ~/.bash: bash/bash
     ~/.bashrc: bash/bashrc
     ~/.config/powerline: powerline/config/powerline
+    ~/.fzf.zsh:
+      path: zsh/fzf.zsh
+      force: true
     ~/.gitignore: git/gitignore
     ~/.gitconfig: git/gitconfig
     ~/.iterm2: mac/iterm2
