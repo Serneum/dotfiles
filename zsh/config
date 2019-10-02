@@ -1,11 +1,11 @@
 DEFAULT_USER=`whoami`
 
 # User configuration
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 if [ $DEFAULT_USER != "vagrant" ]; then
   export GEM_HOME=~/.gem
   export GEM_PATH=~/.gem
 fi
+export PATH="$GEM_HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 
 fpath=(~/.zsh/functions $fpath)
 autoload -U ~/.zsh/functions/*(:t)
@@ -49,8 +49,13 @@ case $HIST_STAMPS in
   *) alias history='fc -l 1' ;;
 esac
 
-export NVM_DIR=~/.nvm
-source ~/.nvm/nvm.sh
+# export NVM_DIR=~/.nvm
+# source ~/.nvm/nvm.sh
+
+source ~/.rvm/scripts/rvm
+
+source <(antibody init)
+antibody bundle < ~/.dotfiles/zsh/antibody
 
 setopt append_history
 setopt extended_history

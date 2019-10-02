@@ -14,12 +14,18 @@
     command: if [[ $OSTYPE == darwin* ]] && ! which brew &>/dev/null; then /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; fi
     stdout: true
   -
-    command: ./powerline/fonts/install.sh
-  -
-    command: sudo pip install ./powerline/powerline
+    command: curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
     stdout: true
   -
-    command: sudo pip install ./powerline/powerline-gitstatus
+    command: python3 get-pip.py
+    stdout: true
+  -
+    command: ./powerline/fonts/install.sh
+  -
+    command: sudo pip3 install ./powerline/powerline
+    stdout: true
+  -
+    command: sudo pip3 install ./powerline/powerline-gitstatus
     stdout: true
   -
     command: if [ ! -d ~/.config ]; then mkdir ~/.config; fi
