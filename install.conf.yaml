@@ -20,6 +20,8 @@
     command: python3 get-pip.py
     stdout: true
   -
+    command: rm get-pip.py
+  -
     command: ./powerline/fonts/install.sh
   -
     command: sudo pip3 install ./powerline/powerline
