@@ -11,6 +11,7 @@ brew 'python'
 brew 'ripgrep'
 brew 'tree'
 brew 'universal-ctags/universal-ctags/universal-ctags'
+brew 'vim'
 
 cask 'font-hack-nerd-font'
 cask 'keybase'
