@@ -1,5 +1,8 @@
+tap 'homebrew/cask-fonts'
+
 brew 'ag'
 brew 'asdf'
+brew 'autojump'
 brew 'cheat'
 brew 'fd'
 brew 'freetds'
@@ -11,10 +14,9 @@ brew 'postgresql'
 brew 'python'
 brew 'ripgrep'
 brew 'tree'
-brew 'universal-ctags/universal-ctags/universal-ctags'
+brew 'universal-ctags/universal-ctags/universal-ctags', args: ['HEAD']
 brew 'vim'
+brew 'zsh'
 
-cask 'font-hack-nerd-font'
 cask 'keybase'
-
-tap 'caskroom/fonts'
+cask 'font-hack-nerd-font'
