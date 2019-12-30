@@ -1,5 +1,9 @@
 DEFAULT_USER=`whoami`
 
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
+
 # User configuration
 if [ $DEFAULT_USER != "vagrant" ]; then
   export GEM_HOME=~/.gem
@@ -7,8 +11,9 @@ if [ $DEFAULT_USER != "vagrant" ]; then
 fi
 export PATH="$GEM_HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+# Add Postgresql
+export PATH="$PATH:/usr/local/opt/postgresql@9.6/bin"
+export PKG_CONFIG_PATH="/usr/local/opt/postgresql@9.6/lib/pkgconfig"
 
 fpath=(~/.zsh/functions $fpath)
 autoload -U ~/.zsh/functions/*(:t)
@@ -52,11 +57,6 @@ case $HIST_STAMPS in
   *) alias history='fc -l 1' ;;
 esac
 
-# export NVM_DIR=~/.nvm
-# source ~/.nvm/nvm.sh
-
-source ~/.rvm/scripts/rvm
-
 source <(antibody init)
 antibody bundle < ~/.dotfiles/zsh/antibody
 
@@ -74,3 +74,5 @@ export FZF_BASE=/usr/local/bin/fzf
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_CTRL_T_COMMAND='fd --type f --type d --hidden --follow --exclude .git'
 export FZF_DEFAULT_OPTS='--reverse'
+
+autoload -Uz compinit && compinit
