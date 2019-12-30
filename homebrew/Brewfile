@@ -1,4 +1,5 @@
 brew 'ag'
+brew 'asdf'
 brew 'cheat'
 brew 'fd'
 brew 'freetds'
