@@ -37,6 +37,29 @@
 - brewfile:
     - homebrew/Brewfile
 
+- shell:
+  -
+    command: asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
+    stdout: true
+  -
+    command: asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git
+    stdout: true
+  -
+    command: asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
+    stdout: true
+  -
+    command: ASDF_RUBY_BUILD_VERSION=master asdf install ruby 2.4.3
+    stdout: true
+  -
+    command: asdf install elixir 1.6
+    stdout: true
+  -
+    command: asdf install erlang 20.3
+    stdout: true
+  -
+    command: gem install colorls
+    stdout: true
+
 - link:
     ~/.bash: bash/bash
     ~/.bashrc: bash/bashrc
