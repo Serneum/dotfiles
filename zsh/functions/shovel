@@ -1,3 +1,3 @@
 function shovel() {
-  cd ~/dev && ./script/run shovel "$@"
+  cd ~/workspace/dev && ./script/run shovel "$@"
 }
