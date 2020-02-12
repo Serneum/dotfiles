@@ -3,10 +3,10 @@ alias cd..='cd ..'
 alias grep='grep --color=auto'
 
 if [[ $OSTYPE == darwin* ]]; then
-  alias ll='colorls -Al --gs'
-  alias ls='colorls --gs'
-  # alias ll='ls -alFG'
-  # alias ls='ls -G'
+  # alias ll='ls -Al --gs'
+  # alias ls='ls --gs'
+  alias ll='ls -alFG'
+  alias ls='ls -G'
 else
   alias ll='ls -alF --color'
   alias ls='ls --color'
@@ -18,6 +18,7 @@ alias gbr='git br'
 alias gc='git ci'
 alias gca='git ci --amend'
 alias gd='git diff'
+alias gf='git fetch'
 alias gcl='git clone'
 alias gcm='git ci -m'
 alias gco='git co'
@@ -50,18 +51,8 @@ if [[ $OSTYPE == darwin* ]]; then
   alias brewu='brew update  && brew upgrade --all && brew cleanup && brew prune && brew doctor'
 fi
 
-# Vagrant aliases
-alias vssh='vagrant ssh'
-alias vget='~/workspace/vagrant/script/getproject'
-alias cdv='cd ~/workspace/vagrant'
-alias cdvc='cd ~/workspace/vagrant/code'
-alias vbe='vr bundle exec'
-
 # Ruby/Rails
 alias sr='spring rspec'
 
 # Tmate
 alias tmlink="tmate show-messages | tail -1 | cut -d' ' -f9- | pbcopy"
-
-# Spacemacs
-alias e="emacs -nw"
