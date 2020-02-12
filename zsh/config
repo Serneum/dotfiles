@@ -1,4 +1,11 @@
 DEFAULT_USER=`whoami`
+ZSH_CUSTOM=~/.oh-my-zsh/custom
+
+ZSH_THEME="powerlevel10k/powerlevel10k"
+source "$ZSH_CUSTOM/themes/powerlevel10k/powerlevel10k.zsh-theme"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
@@ -30,10 +37,6 @@ bindkey '^[[B' down-line-or-search
 
 # Fix autojump
 if [[ $OSTYPE == darwin* ]]; then [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh; fi
-
-# Install Powerline
-powerline-daemon -q
-. ~/.dotfiles/powerline/powerline/powerline/bindings/zsh/powerline.zsh
 
 # Add ssh identity
 ssh-add -L &> /dev/null
@@ -76,3 +79,5 @@ export FZF_CTRL_T_COMMAND='fd --type f --type d --hidden --follow --exclude .git
 export FZF_DEFAULT_OPTS='--reverse'
 
 autoload -Uz compinit && compinit
+. $(brew --prefix asdf)/asdf.sh
+. $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
