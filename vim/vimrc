@@ -128,6 +128,8 @@ map g# <Plug>(incsearch-nohl-g#)
 
 nnoremap <leader>. :CtrlPTag<cr>
 
+nnoremap <F5> :silent update<Bar>silent !open % -a /Applications/Brave\ Browser.app %:p &<CR>
+
 " Set color scheme
 let g:dracula_colorterm=0
 let g:dracula_italic = 0
