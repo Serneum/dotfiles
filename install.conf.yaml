@@ -38,22 +38,24 @@
   -
     command: asdf install erlang 20.3
     stdout: true
-  -
-    command: gem install colorls
-    stdout: true
 
 - link:
-    ~/.bash: bash/bash
-    ~/.bashrc: bash/bashrc
+    ~/.bash:
+      path: bash/bash
+      force: true
+    ~/.bashrc:
+      path: bash/bashrc
+      force: true
     ~/.fzf.zsh:
       path: zsh/fzf.zsh
       force: true
     ~/.gitignore: git/gitignore
     ~/.gitconfig: git/gitconfig
     ~/.iterm2: mac/iterm2
-    ~/.spacemacs: emacs/spacemacs
     ~/.tmate.conf: cmm/tmate.conf
-    ~/.vimrc: vim/vimrc
+    ~/.vimrc:
+      path: vim/vimrc
+      force: true
     ~/.zsh: zsh
     ~/.zshrc:
       path: zsh/zshrc
