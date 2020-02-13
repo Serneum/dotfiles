@@ -58,6 +58,9 @@
     ~/.zshrc:
       path: zsh/zshrc
       force: true
+    ~/.p10k.zsh:
+      path: zsh/p10k.zsh
+      force: true
     /usr/local/bin/git-each: git/util/git-each
     /usr/local/bin/git-eachsh: git/util/git-eachsh
     /usr/local/bin/git-find-all: git/util/git-find-all
