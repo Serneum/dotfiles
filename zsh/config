@@ -1,11 +1,11 @@
 DEFAULT_USER=`whoami`
-ZSH_CUSTOM=~/.oh-my-zsh/custom
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_CUSTOM=~/.oh-my-zsh/custom
 source "$ZSH_CUSTOM/themes/powerlevel10k/powerlevel10k.zsh-theme"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
