@@ -1,7 +1,9 @@
-# robbyrussell/oh-my-zsh path:plugins/autojump
-# robbyrussell/oh-my-zsh path:plugins/git
-robbyrussell/oh-my-zsh path:plugins/vundle
+ohmyzsh/ohmyzsh path:plugins/asdf
+ohmyzsh/ohmyzsh path:plugins/autojump
+ohmyzsh/ohmyzsh path:plugins/vundle
 
 zdharma/fast-syntax-highlighting
 zsh-users/zsh-autosuggestions
 zsh-users/zsh-history-substring-search
+
+romkatv/powerlevel10k
