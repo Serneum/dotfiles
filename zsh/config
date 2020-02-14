@@ -60,7 +60,7 @@ case $HIST_STAMPS in
   *) alias history='fc -l 1' ;;
 esac
 
-source ~/.dotfiles/zsh/antibody.sh
+source ~/.zsh/antibody.sh
 
 setopt append_history
 setopt extended_history
