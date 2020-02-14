@@ -60,8 +60,6 @@ case $HIST_STAMPS in
   *) alias history='fc -l 1' ;;
 esac
 
-source ~/.zsh/antibody.sh
-
 setopt append_history
 setopt extended_history
 setopt hist_expire_dups_first
@@ -80,3 +78,5 @@ export FZF_DEFAULT_OPTS='--reverse'
 autoload -Uz compinit && compinit
 . $(brew --prefix asdf)/asdf.sh
 . $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
+
+source ~/.zsh/antibody.sh
