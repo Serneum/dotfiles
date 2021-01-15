@@ -32,12 +32,6 @@ bindkey '^[[B' down-line-or-search
 # bindkey "$terminfo[${TERM_INFO_PREFIX}cuu1]" history-substring-search-up
 # bindkey "$terminfo[${TERM_INFO_PREFIX}cud1]" history-substring-search-down
 
-# Add ssh identity
-ssh-add -L &> /dev/null
-if [ $? -eq 1 ]; then
-  ssh-add
-fi
-
 # Command history configuration
 if [ -z "$HISTFILE" ]; then
     HISTFILE=$HOME/.zsh_history
@@ -72,3 +66,5 @@ export FZF_DEFAULT_OPTS='--reverse'
 autoload -Uz compinit && compinit
 . $(brew --prefix asdf)/asdf.sh
 . $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
+
+eval "$(direnv hook zsh)"
