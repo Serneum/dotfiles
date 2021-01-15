@@ -42,6 +42,9 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'slashmili/alchemist.vim'
 Bundle 'slime-lang/vim-slime-syntax.git'
 
+" JSON
+Plugin 'elzr/vim-json'
+
 " Add the fzf.vim plugin to wrap fzf:
 Plugin 'junegunn/fzf.vim'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -144,13 +147,13 @@ syntax enable
 autocmd BufNewFile,BufRead *.slim set filetype=slime
 
 " Ruby, JS, Elixir file settings
-au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim,*.rake         set tabstop=2
-au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim,*.rake         set softtabstop=2
-au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim,*.rake         set shiftwidth=2
-au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim,*.rake         set expandtab
-au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim,*.rake         set smarttab
-au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim,*.rake         set autoindent
-au BufRead,BufNewFile *.rb                                                      match Error /\%81v.\+/
+au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim,*.rake,*.json         set tabstop=2
+au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim,*.rake,*.json         set softtabstop=2
+au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim,*.rake,*.json         set shiftwidth=2
+au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim,*.rake,*.json         set expandtab
+au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim,*.rake,*.json         set smarttab
+au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim,*.rake,*.json         set autoindent
+au BufRead,BufNewFile *.rb                                                             match Error /\%81v.\+/
 
-au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim,*.rake         match BadWhitespace /^\t\+/
-au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim,*.rake         match BadWhitespace /\s\+$/
+au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim,*.rake,*.json         match BadWhitespace /^\t\+/
+au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim,*.rake,*.json         match BadWhitespace /\s\+$/
