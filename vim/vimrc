@@ -45,6 +45,10 @@ Bundle 'slime-lang/vim-slime-syntax.git'
 " JSON
 Plugin 'elzr/vim-json'
 
+" Go
+Plugin 'fatih/vim-go'
+let g:gofmt_command = "goimports"
+
 " Add the fzf.vim plugin to wrap fzf:
 Plugin 'junegunn/fzf.vim'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
