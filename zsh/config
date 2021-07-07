@@ -1,3 +1,4 @@
+export PROMPT_EOL_MARK=''
 DEFAULT_USER=`whoami`
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
