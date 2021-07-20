@@ -29,15 +29,6 @@
   -
     command: asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
     stdout: true
-  -
-    command: ASDF_RUBY_BUILD_VERSION=master asdf install ruby 2.4.3
-    stdout: true
-  -
-    command: asdf install elixir 1.6
-    stdout: true
-  -
-    command: asdf install erlang 20.3
-    stdout: true
 
 - link:
     ~/.bash:
