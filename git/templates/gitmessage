@@ -1,0 +1,36 @@
+# <jira-tag> (If applied, this commit will...) <subject> (Max 72 char)
+# |<----   Preferably using up to 50 chars   --->|<------------------->|
+
+# (Optional) Why is this change necessary?
+# |<----   Try To Limit Each Line to a Maximum Of 72 Characters   ---->|
+
+# (Optional) What functionality or behavior was introduced or removed
+# |<----   Try To Limit Each Line to a Maximum Of 72 Characters   ---->|
+
+# (Optional) Provide links or keys to any relevant tickets, articles or other resources
+# |<----   Try To Limit Each Line to a Maximum Of 72 Characters   ---->|
+
+# --- COMMIT END ---
+# --------------------
+# Remember to:
+#   * Capitalize the subject line
+#   * Use the imperative mood in the subject line
+#   * Do not end the subject line with a period
+#   * Separate subject from body with a blank line
+#   * Use the body to explain what and why vs. how
+#   * Can use multiple lines with "-" or "*" for bullet points in body
+# --------------------
+
+# Example
+####################################################
+# SIFT-123 Redirect user to requested page after login
+
+# Users were being redirected to the home page after login, which is less
+# useful than redirecting to the page they had originally requested prior to
+# being redirected to the login form.
+
+# * Store requested path in a session variable
+# * Redirect to the stored location after successfully logging in the user
+
+# https://github.com/plataformatec/devise/wiki/How-To:-redirect-to-a-specific-page-on-successful-sign-in
+####################################################

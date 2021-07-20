@@ -59,5 +59,6 @@
 	rebase = true
 [commit]
 	gpgsign = true
+	template = ~/.gitmessage
 [init]
 	templateDir = ~/.git_template
