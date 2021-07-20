@@ -9,6 +9,7 @@ brew "coreutils"
 brew "libtool"
 brew "libyaml"
 brew "asdf"
+brew 'autoconf@2.69', link: true, overwrite: true
 brew "autojump"
 brew "python"
 brew "azure-cli"

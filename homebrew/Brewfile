@@ -2,6 +2,8 @@ tap 'homebrew/cask-fonts'
 
 brew 'ag'
 brew 'asdf'
+# Big Sur Erlang fix
+brew 'autoconf@2.69', link: true, overwrite: true
 brew 'autojump'
 brew 'cheat'
 brew 'fd'
@@ -13,6 +15,7 @@ brew 'gpg'
 brew 'postgresql'
 brew 'python'
 brew 'ripgrep'
+brew "the_silver_searcher"
 brew 'tree'
 brew 'universal-ctags/universal-ctags/universal-ctags', args: ['HEAD']
 brew 'vim'
