@@ -46,6 +46,3 @@ fi
 
 # Ruby/Rails
 alias sr='spring rspec'
-
-# Tmate
-alias tmlink="tmate show-messages | tail -1 | cut -d' ' -f9- | pbcopy"
