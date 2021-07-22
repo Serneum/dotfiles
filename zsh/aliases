@@ -5,6 +5,8 @@ alias grep='grep --color=auto'
 alias ll='exa -alF'
 alias ls='exa'
 
+alias cat='bat'
+
 # Git Aliases
 alias ga='git add'
 alias gbr='git br'
