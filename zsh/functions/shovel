@@ -1,3 +1,0 @@
-function shovel() {
-  ~/workspace/dev/script/run shovel "$@"
-}

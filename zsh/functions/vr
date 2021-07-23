@@ -1,4 +1,0 @@
-function vr() {
-  project=${PWD##*/}
-  vagrant ssh -c "cd /vagrant/code/$project && $*"
-}
