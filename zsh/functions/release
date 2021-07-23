@@ -1,0 +1,14 @@
+function release() {
+  echo '\e[32mStashing changes.\e[0m'
+  git add .
+  git stash
+
+  echo '\e[32mChecking out and updating master.\e[0m'
+  git checkout master
+  git pull
+
+  echo '\e[32mTagging release.\e[0m'
+  formatted_date=$(TZ=America/Chicago date +"%Y-%m-%d-%H%M")
+  git tag -as "$formatted_date" -m "$formatted_date"
+  git push origin "$formatted_date"
+}
