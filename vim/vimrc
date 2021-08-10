@@ -118,6 +118,8 @@ Plugin 'haya14busa/incsearch.vim'
 " Gutentags
 Plugin 'ludovicchabant/vim-gutentags'
 
+Plugin 'gelguy/wilder.nvim'
+
 " All plugins defined
 call vundle#end()
 
