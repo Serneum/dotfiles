@@ -14,13 +14,13 @@ brew 'fzf'
 brew 'getantibody/tap/antibody'
 brew 'git'
 brew 'gpg'
+brew 'neovim'
 brew 'postgresql'
 brew 'python'
 brew 'ripgrep'
 brew "the_silver_searcher"
 brew 'tree'
 brew 'universal-ctags/universal-ctags/universal-ctags', args: ['HEAD']
-brew 'vim'
 brew 'zsh'
 
 cask 'keybase'

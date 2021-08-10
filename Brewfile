@@ -23,12 +23,12 @@ brew "imagemagick"
 brew "imagemagick@6"
 brew "jq"
 brew "libxml2"
+brew "neovim"
 brew "postgresql@9.6", restart_service: true
 brew "redis", restart_service: true
 brew "ripgrep"
 brew "the_silver_searcher"
 brew "tree"
-brew "vim"
 brew "zlib"
 brew "getantibody/tap/antibody"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]

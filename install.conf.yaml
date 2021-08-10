@@ -29,6 +29,8 @@
   -
     command: asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
     stdout: true
+  -
+    command: mkdir -p ~/.config/nvim
 
 - link:
     ~/.bash:
@@ -36,6 +38,9 @@
       force: true
     ~/.bashrc:
       path: bash/bashrc
+      force: true
+    ~/.config/nvim/init.vim:
+      path: vim/init.vim
       force: true
     ~/.fzf.zsh:
       path: zsh/fzf.zsh
