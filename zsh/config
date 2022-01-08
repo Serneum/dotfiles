@@ -9,11 +9,9 @@ if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 fi
 
+plugins=(autojump vundle)
+
 # User configuration
-if [ $DEFAULT_USER != "vagrant" ]; then
-  export GEM_HOME=~/.gem
-  export GEM_PATH=~/.gem
-fi
 export PATH="$GEM_HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 
 # Add Postgresql
