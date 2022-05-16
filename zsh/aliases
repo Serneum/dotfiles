@@ -31,6 +31,10 @@ alias gsta='git sta'
 alias glog='git log'
 alias gbpurge='git branch --merged | grep -v "\*" | grep -v "master" | grep -v "develop" | grep -v "staging" | xargs -n 1 git branch -d'
 
+# Lima/Nerdctl alias to Docker commands
+alias docker='lima nerdctl'
+alias docker-compose='lima nerdctl compose'
+
 # platform/dev Docker aliases
 alias de='docker exec -e COLUMNS="$(tput cols)" -e LINES="$(tput lines)" -ti'
 alias dps='docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}\t{{.Command}}\t{{.Image}}"'
