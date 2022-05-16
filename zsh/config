@@ -11,8 +11,7 @@ fi
 
 plugins=(autojump vundle)
 
-# User configuration
-export PATH="$GEM_HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$PATH"
 
 # Add Postgresql
 export PATH="$PATH:/usr/local/opt/postgresql@9.6/bin"
