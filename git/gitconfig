@@ -62,3 +62,8 @@
 	template = ~/.gitmessage
 [init]
 	templateDir = ~/.git_template
+[fetch]
+	prune = true
+[rebase]
+	autosquash = true
+	autoStash = true
