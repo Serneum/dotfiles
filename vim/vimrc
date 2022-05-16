@@ -1,6 +1,5 @@
 " Required
 set nocompatible
-filetype off
 
 " Show line numbers
 set number relativenumber
@@ -21,37 +20,41 @@ set list
 
 set eol
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/plugged')
+Plug 'gmarik/Vundle.vim'
 
 " Dracula Theme
-Plugin 'dracula/vim'
+Plug 'dracula/vim'
 
 " Ruby
-Plugin 'vim-ruby/vim-ruby'
-Plugin 't9md/vim-ruby-xmpfilter'
-Plugin 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby'
+Plug 't9md/vim-ruby-xmpfilter'
+Plug 'tpope/vim-rails'
 
 " Coffeescript
-Plugin 'kchmck/vim-coffee-script'
+Plug 'kchmck/vim-coffee-script'
 
 " Elixir
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'slashmili/alchemist.vim'
-Bundle 'slime-lang/vim-slime-syntax.git'
+Plug 'elixir-lang/vim-elixir'
+Plug 'slashmili/alchemist.vim'
+Plug 'https://www.github.com/slime-lang/vim-slime-syntax.git'
 
 " JSON
-Plugin 'elzr/vim-json'
+Plug 'elzr/vim-json'
 
 " Go
-Plugin 'fatih/vim-go'
+Plug 'fatih/vim-go'
 let g:gofmt_command = "goimports"
 
 " Add the fzf.vim plugin to wrap fzf:
-Plugin 'junegunn/fzf.vim'
-Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 let g:fzf_files_options =
       \ '--reverse ' .
       \ '--preview-window top:60% ' .
@@ -68,19 +71,19 @@ autocmd FileType ruby xmap <buffer> <D-r> <Plug>(xmpfilter-run)
 autocmd FileType ruby imap <buffer> <D-r> <Plug>(xmpfilter-run)
 
 " Bad Whitespace
-Plugin 'bitc/vim-bad-whitespace'
+Plug 'bitc/vim-bad-whitespace'
 
 " Git Gutter
-Plugin 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 
 " Airline
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 set laststatus=2
 let g:airline_powerline_fonts = 1
 
 " Syntastic
-Plugin 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -96,34 +99,50 @@ nnoremap <space>f :Rg!<space><c-r><c-w><cr>
 xnoremap <space>f y:Rg!<space><c-r>0<cr>
 "
 " Nerd Tree
-Plugin 'scrooloose/nerdtree.git'
-autocmd StdinReadPre * let s:std_in=1
-autocmd vimenter * NERDTree
-autocmd VimEnter * if argc() | wincmd p | endif
-let g:NERDTreeNodeDelimiter = "\u00a0"
+" Plug 'scrooloose/nerdtree.git'
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd vimenter * NERDTree
+" autocmd VimEnter * if argc() | wincmd p | endif
+" let g:NERDTreeNodeDelimiter = "\u00a0"
 " autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " End wise
-Plugin 'tpope/vim-endwise'
+Plug 'tpope/vim-endwise'
 
 " Silver Searcher
 let g:ackprg = 'ag --vimgrep'
 
 " Relative line numbers
-Plugin 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
 " Incsearch
-Plugin 'haya14busa/incsearch.vim'
+Plug 'haya14busa/incsearch.vim'
 
-" Gutentags
-Plugin 'ludovicchabant/vim-gutentags'
+Plug 'gelguy/wilder.nvim'
 
-Plugin 'gelguy/wilder.nvim'
+Plug 'APZelos/blamer.nvim'
+let g:blamer_enabled = 1
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+function! SetupCommandAbbrs(from, to)
+  exec 'cnoreabbrev <expr> '.a:from
+        \ .' ((getcmdtype() ==# ":" && getcmdline() ==# "'.a:from.'")'
+        \ .'? ("'.a:to.'") : ("'.a:from.'"))'
+endfunction
+
+" Use C to open coc config
+call SetupCommandAbbrs('C', 'CocConfig')
+
+command -nargs=0 Swagger :CocCommand swagger.render
+
+Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
+
+Plug 'kyazdani42/nvim-web-devicons'
+
+Plug 'kyazdani42/nvim-tree.lua'
 
 " All plugins defined
-call vundle#end()
-
-set statusline+=%{gutentags#statusline()}
+call plug#end()
 
 " Set incsearch settings
 set hlsearch
@@ -145,10 +164,6 @@ let g:dracula_italic = 0
 colorscheme dracula
 highlight Normal ctermbg=None
 
-" Required
-filetype plugin indent on
-syntax enable
-
 " Set up Slime to work with .slim files
 autocmd BufNewFile,BufRead *.slim set filetype=slime
 
@@ -163,3 +178,93 @@ au BufRead,BufNewFile *.rb                                                      
 
 au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim,*.rake,*.json         match BadWhitespace /^\t\+/
 au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim,*.rake,*.json         match BadWhitespace /\s\+$/
+
+let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache' ] "empty by default
+let g:nvim_tree_gitignore = 1 "0 by default
+let g:nvim_tree_auto_open = 1 "0 by default, opens the tree when typing `vim $DIR` or `vim`
+let g:nvim_tree_auto_close = 1 "0 by default, closes the tree when it's the last window
+let g:nvim_tree_follow = 1 "0 by default, this option allows the cursor to be updated when entering a buffer
+let g:nvim_tree_indent_markers = 1 "0 by default, this option shows indent markers when folders are open
+let g:nvim_tree_hide_dotfiles = 1 "0 by default, this option hides files and folders starting with a dot `.`
+let g:nvim_tree_git_hl = 1 "0 by default, will enable file highlight for git attributes (can be used without the icons).
+let g:nvim_tree_highlight_opened_files = 1 "0 by default, will enable folder and file icon highlight for opened files/directories.
+let g:nvim_tree_root_folder_modifier = ':~' "This is the default. See :help filename-modifiers for more options
+let g:nvim_tree_tab_open = 1 "0 by default, will open the tree when entering a new tab and the tree was previously open
+let g:nvim_tree_auto_resize = 0 "1 by default, will resize the tree to its saved width when opening a file
+let g:nvim_tree_disable_netrw = 0 "1 by default, disables netrw
+let g:nvim_tree_hijack_netrw = 0 "1 by default, prevents netrw from automatically opening when opening directories (but lets you keep its other utilities)
+let g:nvim_tree_add_trailing = 1 "0 by default, append a trailing slash to folder names
+let g:nvim_tree_group_empty = 1 " 0 by default, compact folders that only contain a single folder into one node in the file tree
+let g:nvim_tree_lsp_diagnostics = 1 "0 by default, will show lsp diagnostics in the signcolumn. See :help nvim_tree_lsp_diagnostics
+let g:nvim_tree_disable_window_picker = 1 "0 by default, will disable the window picker.
+let g:nvim_tree_hijack_cursor = 0 "1 by default, when moving cursor in the tree, will position the cursor at the start of the file on the current line
+let g:nvim_tree_icon_padding = ' ' "one space by default, used for rendering the space between the icon and the filename. Use with caution, it could break rendering if you set an empty string depending on your font.
+let g:nvim_tree_symlink_arrow = ' >> ' " defaults to ' ➛ '. used as a separator between symlinks' source and target.
+let g:nvim_tree_update_cwd = 1 "0 by default, will update the tree cwd when changing nvim's directory (DirChanged event). Behaves strangely with autochdir set.
+let g:nvim_tree_respect_buf_cwd = 1 "0 by default, will change cwd of nvim-tree to that of new buffer's when opening nvim-tree.
+let g:nvim_tree_window_picker_exclude = {
+    \   'filetype': [
+    \     'packer',
+    \     'qf'
+    \   ],
+    \   'buftype': [
+    \     'terminal'
+    \   ]
+    \ }
+" Dictionary of buffer option names mapped to a list of option values that
+" indicates to the window picker that the buffer's window should not be
+" selectable.
+let g:nvim_tree_special_files = { 'README.md': 1 } " List of filenames that gets highlighted with NvimTreeSpecialFile
+let g:nvim_tree_show_icons = {
+    \ 'git': 1,
+    \ 'folders': 0,
+    \ 'files': 0,
+    \ 'folder_arrows': 0,
+    \ }
+"If 0, do not show the icons for one of 'git' 'folder' and 'files'
+"1 by default, notice that if 'files' is 1, it will only display
+"if nvim-web-devicons is installed and on your runtimepath.
+"if folder is 1, you can also tell folder_arrows 1 to show small arrows next to the folder icons.
+"but this will not work when you set indent_markers (because of UI conflict)
+
+" default will show icon by default if no icon is provided
+" default shows no icon by default
+let g:nvim_tree_icons = {
+    \ 'default': '',
+    \ 'symlink': '',
+    \ 'git': {
+    \   'unstaged': "✗",
+    \   'staged': "✓",
+    \   'unmerged': "",
+    \   'renamed': "➜",
+    \   'untracked': "★",
+    \   'deleted': "",
+    \   'ignored': "◌"
+    \   },
+    \ 'folder': {
+    \   'arrow_open': "",
+    \   'arrow_closed': "",
+    \   'default': "",
+    \   'open': "",
+    \   'empty': "",
+    \   'empty_open': "",
+    \   'symlink': "",
+    \   'symlink_open': "",
+    \   },
+    \   'lsp': {
+    \     'hint': "",
+    \     'info': "",
+    \     'warning': "",
+    \     'error': "",
+    \   }
+    \ }
+
+nnoremap <C-n> :NvimTreeToggle<CR>
+nnoremap <leader>r :NvimTreeRefresh<CR>
+nnoremap <leader>n :NvimTreeFindFile<CR>
+" NvimTreeOpen, NvimTreeClose and NvimTreeFocus are also available if you need them
+
+set termguicolors " this variable must be enabled for colors to be applied properly
+
+" a list of groups can be found at `:help nvim_tree_highlight`
+highlight NvimTreeFolderIcon guibg=blue
