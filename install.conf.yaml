@@ -17,7 +17,7 @@
     command: if [ ! -d ~/.git_template ]; then mkdir ~/.git_template; fi
 
 - brewfile:
-    - homebrew/Brewfile
+  - homebrew/Brewfile
 
 - shell:
   -
