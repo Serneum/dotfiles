@@ -31,6 +31,9 @@ alias gsta='git sta'
 alias glog='git log'
 alias gbpurge='git branch --merged | grep -v "\*" | grep -v "master" | grep -v "develop" | grep -v "staging" | xargs -n 1 git branch -d'
 
+# Run specs on changed files
+alias rch='rspec $(git ls-files --modified --others spec)'
+
 # Lima/Nerdctl alias to Docker commands
 alias docker='lima nerdctl'
 alias docker-compose='lima nerdctl compose'
