@@ -83,7 +83,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-map <c-p> :FZF<cr>
+map <C-p> :FZF<cr>
 
 nnoremap <space>f :Rg!<space><c-r><c-w><cr>
 xnoremap <space>f y:Rg!<space><c-r>0<cr>
@@ -142,13 +142,13 @@ syntax enable
 autocmd BufNewFile,BufRead *.slim set filetype=slime
 
 " Ruby, JS, Elixir file settings
-au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim,*.rake         set tabstop=2
-au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim,*.rake         set softtabstop=2
-au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim,*.rake         set shiftwidth=2
-au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim,*.rake         set expandtab
-au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim,*.rake         set smarttab
-au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim,*.rake         set autoindent
+au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim,*.rake,*.yml,*.sh         set tabstop=2
+au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim,*.rake,*.yml,*.sh         set softtabstop=2
+au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim,*.rake,*.yml,*.sh         set shiftwidth=2
+au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim,*.rake,*.yml,*.sh         set expandtab
+au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim,*.rake,*.yml,*.sh         set smarttab
+au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim,*.rake,*.yml,*.sh         set autoindent
 au BufRead,BufNewFile *.rb                                                      match Error /\%81v.\+/
 
-au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim,*.rake         match BadWhitespace /^\t\+/
-au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim,*.rake         match BadWhitespace /\s\+$/
+au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim,*.rake,*.yml,*.sh         match BadWhitespace /^\t\+/
+au BufRead,BufNewFile *.js,*.rb,*.exs,*.ex,*.eex,*.coffee,*.slim,*.rake,*.yml,*.sh         match BadWhitespace /\s\+$/

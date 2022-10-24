@@ -50,13 +50,6 @@ if [[ $OSTYPE == darwin* ]]; then
   alias brewu='brew update  && brew upgrade --all && brew cleanup && brew prune && brew doctor'
 fi
 
-# Vagrant aliases
-alias vssh='vagrant ssh'
-alias vget='~/workspace/vagrant/script/getproject'
-alias cdv='cd ~/workspace/vagrant'
-alias cdvc='cd ~/workspace/vagrant/code'
-alias vbe='vr bundle exec'
-
 # Ruby/Rails
 alias sr='spring rspec'
 

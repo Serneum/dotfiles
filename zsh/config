@@ -1,11 +1,7 @@
-DEFAULT_USER=`whoami`
-
 # User configuration
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
-if [ $DEFAULT_USER != "vagrant" ]; then
-  export GEM_HOME=~/.gem
-  export GEM_PATH=~/.gem
-fi
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/snap/bin:$HOME/.local/bin:$PATH"
+export GEM_HOME=~/.gem
+export GEM_PATH=~/.gem
 
 fpath=(~/.zsh/functions $fpath)
 autoload -U ~/.zsh/functions/*(:t)
@@ -49,8 +45,8 @@ case $HIST_STAMPS in
   *) alias history='fc -l 1' ;;
 esac
 
-export NVM_DIR=~/.nvm
-source ~/.nvm/nvm.sh
+# export NVM_DIR=~/.nvm
+# source ~/.nvm/nvm.sh
 
 setopt append_history
 setopt extended_history
@@ -63,6 +59,14 @@ setopt share_history # share command history data
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_BASE=/usr/local/bin/fzf
-export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
-export FZF_CTRL_T_COMMAND='fd --type f --type d --hidden --follow --exclude .git'
+if [[ $OSTYPE == darwin* ]]
+then
+  export FZF_COMMAND='fd'
+else
+  export FZF_COMMAND='fdfind'
+fi
+export FZF_DEFAULT_COMMAND="${FZF_COMMAND} --type f --hidden --follow --exclude .git"
+export FZF_CTRL_T_COMMAND="${FZF_COMMAND} --type f --type d --hidden --follow --exclude .git"
 export FZF_DEFAULT_OPTS='--reverse'
+
+. $HOME/.asdf/asdf.sh
