@@ -16,9 +16,6 @@
 [submodule "iterm"]
 	path = iterm
 	url = https://github.com/dracula/iterm.git
-[submodule "github_assistant"]
-	path = github_assistant
-	url = git@git.innova-partners.com:fflores/github_assistant.git
 [submodule "dotbot-brew"]
 	path = dotbot-brew
 	url = https://github.com/d12frosted/dotbot-brew.git
