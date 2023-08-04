@@ -35,8 +35,8 @@ alias gbpurge='git branch --merged | grep -v "\*" | grep -v "master" | grep -v "
 alias rch='rspec $(git ls-files --modified --others spec)'
 
 # Lima/Nerdctl alias to Docker commands
-alias docker='lima nerdctl'
-alias docker-compose='lima nerdctl compose'
+# alias docker='lima nerdctl'
+# alias docker-compose='lima nerdctl compose'
 
 # platform/dev Docker aliases
 alias de='docker exec -e COLUMNS="$(tput cols)" -e LINES="$(tput lines)" -ti'
