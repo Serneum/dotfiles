@@ -62,8 +62,9 @@ export FZF_CTRL_T_COMMAND='fd --type f --type d --hidden --follow --exclude .git
 export FZF_DEFAULT_OPTS='--reverse'
 
 autoload -Uz compinit && compinit
-. $(brew --prefix asdf)/asdf.sh
+# export ASDF_DIR="$(brew --prefix asdf)/libexec"
 . $(brew --prefix asdf)/libexec/asdf.sh
+# . $(brew --prefix asdf)/asdf.sh
 # . $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
 
 # Add Yarn global
