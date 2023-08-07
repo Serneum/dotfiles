@@ -34,10 +34,6 @@ return require('packer').startup(function(use)
     branch = '0.1.x',
     requires = { 'nvim-lua/plenary.nvim' }
   }
-  use {
-    'ibhagwan/fzf-lua',
-    requires = { "nvim-tree/nvim-web-devicons" }
-  }
   use 'rcarriga/nvim-notify'
   use 'lewis6991/gitsigns.nvim'
   use {
