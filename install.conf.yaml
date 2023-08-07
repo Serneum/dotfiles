@@ -39,8 +39,11 @@
     ~/.bashrc:
       path: bash/bashrc
       force: true
-    ~/.config/nvim/init.vim:
-      path: vim/init.vim
+    ~/.config/nvim/init.lua:
+      path: vim/init.lua
+      force: true
+    ~/.config/nvim/plugin:
+      path: vim/plugin
       force: true
     ~/.fzf.zsh:
       path: zsh/fzf.zsh
@@ -48,9 +51,6 @@
     ~/.gitignore: git/gitignore
     ~/.gitconfig: git/gitconfig
     ~/.iterm2: mac/iterm2
-    ~/.vimrc:
-      path: vim/vimrc
-      force: true
     ~/.zsh: zsh
     ~/.zshrc:
       path: zsh/zshrc
