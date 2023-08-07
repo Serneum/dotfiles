@@ -68,6 +68,7 @@ return require('packer').startup(function(use)
     branch = 'main',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
+  use 'xiyaowong/transparent.nvim'
   use 'dracula/vim'
 
   vim.cmd[[colorscheme dracula]]
