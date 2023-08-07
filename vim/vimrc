@@ -99,12 +99,12 @@ nnoremap <space>f :Rg!<space><c-r><c-w><cr>
 xnoremap <space>f y:Rg!<space><c-r>0<cr>
 "
 " Nerd Tree
-" Plug 'scrooloose/nerdtree.git'
-" autocmd StdinReadPre * let s:std_in=1
-" autocmd vimenter * NERDTree
-" autocmd VimEnter * if argc() | wincmd p | endif
-" let g:NERDTreeNodeDelimiter = "\u00a0"
-" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+Plug 'preservim/nerdtree'
+autocmd StdinReadPre * let s:std_in=1
+autocmd vimenter * NERDTree
+autocmd VimEnter * if argc() | wincmd p | endif
+let g:NERDTreeNodeDelimiter = "\u00a0"
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " End wise
 Plug 'tpope/vim-endwise'
