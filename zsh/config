@@ -7,6 +7,9 @@ export BAT_THEME=Nord
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
+# Set dircolors to Nord color scheme
+test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
+
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 fi

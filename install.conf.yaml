@@ -45,6 +45,9 @@
     ~/.config/nvim/plugin:
       path: vim/plugin
       force: true
+    ~/.dir_colors:
+      path: dircolors/src/dir_colors
+      force: true
     ~/.fzf.zsh:
       path: zsh/fzf.zsh
       force: true
