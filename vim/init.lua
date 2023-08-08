@@ -59,6 +59,7 @@ return require('packer').startup(function(use)
     'jdhao/whitespace.nvim',
     event = 'VimEnter'
   }
+  use 'romgrk/barbar.nvim'
   use {
     'glepnir/galaxyline.nvim',
     branch = 'main',
