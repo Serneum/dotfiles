@@ -77,6 +77,11 @@ return require('packer').startup(function(use)
     'neovim/nvim-lspconfig',
   }
 
+  -- Git Blame
+  use 'APZelos/blamer.nvim'
+  vim.g.blamer_enabled = 1
+  vim.g.blamer_delay = 500
+
   use 'xiyaowong/transparent.nvim'
   use 'shaunsingh/nord.nvim'
 
