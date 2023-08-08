@@ -71,6 +71,7 @@ return require('packer').startup(function(use)
       ts_update()
     end,
   }
+  use 'mfussenegger/nvim-lint'
   use {
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
