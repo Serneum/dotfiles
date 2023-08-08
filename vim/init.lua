@@ -72,6 +72,11 @@ return require('packer').startup(function(use)
     end,
   }
   use 'mfussenegger/nvim-lint'
+  -- Show location of errors
+  use {
+    'folke/trouble.nvim',
+    requires = { "nvim-tree/nvim-web-devicons" }
+  }
   use {
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
