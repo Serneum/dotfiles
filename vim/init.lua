@@ -71,6 +71,11 @@ return require('packer').startup(function(use)
       ts_update()
     end,
   }
+  use {
+    'williamboman/mason.nvim',
+    'williamboman/mason-lspconfig.nvim',
+    'neovim/nvim-lspconfig',
+  }
 
   use 'xiyaowong/transparent.nvim'
   use 'dracula/vim'
