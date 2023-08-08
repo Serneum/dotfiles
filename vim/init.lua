@@ -78,9 +78,9 @@ return require('packer').startup(function(use)
   }
 
   use 'xiyaowong/transparent.nvim'
-  use 'dracula/vim'
+  use 'shaunsingh/nord.nvim'
 
-  vim.cmd[[colorscheme dracula]]
+  vim.cmd[[colorscheme nord]]
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
