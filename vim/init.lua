@@ -64,6 +64,14 @@ return require('packer').startup(function(use)
     branch = 'main',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = function()
+      local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+      ts_update()
+    end,
+  }
+
   use 'xiyaowong/transparent.nvim'
   use 'dracula/vim'
 
