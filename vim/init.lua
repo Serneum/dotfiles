@@ -8,6 +8,7 @@ vim.opt.softtabstop = 2
 vim.opt.expandtab = true
 vim.opt.autoindent = true
 vim.opt.clipboard = unnamed
+vim.opt.number = true
 
 local ensure_packer = function()
   local fn = vim.fn
@@ -59,6 +60,7 @@ return require('packer').startup(function(use)
     'jdhao/whitespace.nvim',
     event = 'VimEnter'
   }
+  use 'sitiom/nvim-numbertoggle'
   use 'romgrk/barbar.nvim'
   use {
     'glepnir/galaxyline.nvim',
