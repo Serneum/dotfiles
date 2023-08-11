@@ -1,3 +1,5 @@
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
 require("mason").setup()
 require("mason-lspconfig").setup {
   ensure_installed = { "dockerls", "docker_compose_language_service", "elixirls", "lua_ls", "solargraph" }
@@ -5,7 +7,9 @@ require("mason-lspconfig").setup {
 
 require("mason-lspconfig").setup_handlers {
   function (server_name)
-    require("lspconfig")[server_name].setup {}
+    require("lspconfig")[server_name].setup {
+      capabilities = capabilities
+    }
 
     require("lspconfig").lua_ls.setup {
       settings = {
@@ -14,22 +18,12 @@ require("mason-lspconfig").setup_handlers {
             globals = { 'vim' }
           }
         }
-      }
+      },
+      -- Do I need to do this for all setups after the default setup above?
+      -- capabilities = capabilities
     }
   end
 }
-
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
-local lspconfig = require('lspconfig')
-
--- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver' }
-for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup {
-    -- on_attach = my_custom_on_attach,
-    capabilities = capabilities,
-  }
-end
 
 -- luasnip setup
 local luasnip = require 'luasnip'
