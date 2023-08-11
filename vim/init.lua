@@ -7,7 +7,7 @@ vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
 vim.opt.expandtab = true
 vim.opt.autoindent = true
-vim.opt.clipboard = unnamed
+vim.opt.clipboard = 'unnamed'
 vim.opt.number = true
 
 local ensure_packer = function()
