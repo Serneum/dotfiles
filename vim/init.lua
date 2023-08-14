@@ -63,11 +63,6 @@ return require('packer').startup(function(use)
   use 'sitiom/nvim-numbertoggle'
   use 'romgrk/barbar.nvim'
   use {
-    'glepnir/galaxyline.nvim',
-    branch = 'main',
-    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-  }
-  use {
     'nvim-treesitter/nvim-treesitter',
     run = function()
       local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
@@ -88,6 +83,10 @@ return require('packer').startup(function(use)
     'hrsh7th/cmp-nvim-lsp',     -- LSP source for nvim-cmp
     'saadparwaiz1/cmp_luasnip', -- Snippets source for nvim-cmp
     'L3MON4D3/LuaSnip',         -- Snippets plugin
+  }
+  use {
+    'vim-airline/vim-airline',
+    'vim-airline/vim-airline-themes'
   }
 
   -- Git Blame
