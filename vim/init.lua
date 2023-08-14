@@ -88,6 +88,15 @@ return require('packer').startup(function(use)
     'vim-airline/vim-airline',
     'vim-airline/vim-airline-themes'
   }
+  use {
+    "nvim-neotest/neotest",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "antoinemadec/FixCursorHold.nvim",
+      "olimorris/neotest-rspec",
+    }
+  }
 
   -- Git Blame
   use 'APZelos/blamer.nvim'
@@ -95,6 +104,7 @@ return require('packer').startup(function(use)
   vim.g.blamer_delay = 500
 
   use 'xiyaowong/transparent.nvim'
+
   use 'shaunsingh/nord.nvim'
 
   vim.cmd[[colorscheme nord]]
