@@ -78,4 +78,7 @@ export PATH="$PATH:$(yarn global bin)"
 # Add Rust
 export PATH="$PATH:$HOME/.cargo/bin"
 
+source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+antidote load
+
 eval "$(direnv hook zsh)"

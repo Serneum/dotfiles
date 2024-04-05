@@ -13,3 +13,6 @@
 [submodule "dircolors"]
 	path = dircolors
 	url = git@github.com:nordtheme/dircolors.git
+[submodule "fzf"]
+	path = fzf
+	url = git@github.com:junegunn/fzf.git

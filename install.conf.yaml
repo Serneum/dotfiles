@@ -48,6 +48,9 @@
     ~/.dir_colors:
       path: dircolors/src/dir_colors
       force: true
+    ~/.fzf:
+      path: fzf
+      force: true
     ~/.fzf.zsh:
       path: zsh/fzf.zsh
       force: true
@@ -55,6 +58,9 @@
     ~/.gitconfig: git/gitconfig
     ~/.iterm2: mac/iterm2
     ~/.zsh: zsh
+    ~/.zsh_plugins.txt:
+      path: zsh/zsh_plugins.txt
+      force: true
     ~/.zshrc:
       path: zsh/zshrc
       force: true

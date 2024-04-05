@@ -1,5 +1,5 @@
 . ~/.zsh/config
-. ~/.zsh/antibody.sh
+# . ~/.zsh/antibody.sh
 . ~/.zsh/aliases
 . ~/.zsh/powerlevel10k
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
