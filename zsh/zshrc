@@ -3,6 +3,5 @@
 . ~/.zsh/powerlevel10k
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export GPG_TTY=$(tty)
 . "$HOME/.cargo/env"

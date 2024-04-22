@@ -48,6 +48,9 @@
     ~/.dir_colors:
       path: dircolors/src/dir_colors
       force: true
+    ~/.fzf:
+      path: fzf
+      force: true
     ~/.fzf.zsh:
       path: zsh/fzf.zsh
       force: true
