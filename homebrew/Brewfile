@@ -1,28 +1,23 @@
 tap 'homebrew/cask-fonts'
 
 brew 'ag'
+brew 'antidote'
 brew 'asdf'
-# Big Sur Erlang fix
-brew 'autoconf@2.69', link: true, overwrite: true
+brew 'autoconf'
 brew 'autojump'
 brew 'bat'
 brew 'cheat'
-brew 'exa'
+brew 'eza'
 brew 'fd'
 brew 'freetds'
 brew 'fzf'
-brew 'getantibody/tap/antibody'
 brew 'git'
-brew 'git-gui'
 brew 'gpg'
 brew 'neovim'
-brew 'postgresql'
-brew 'python'
 brew 'ripgrep'
 brew "the_silver_searcher"
 brew 'tree'
-brew 'universal-ctags/universal-ctags/universal-ctags', args: ['HEAD']
+brew 'universal-ctags'
 brew 'zsh'
 
-cask 'keybase'
 cask 'font-hack-nerd-font'
