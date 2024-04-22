@@ -2,7 +2,7 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 require("mason").setup()
 require("mason-lspconfig").setup {
-  ensure_installed = { "dockerls", "docker_compose_language_service", "elixirls", "lua_ls", "solargraph" }
+  ensure_installed = { "dockerls", "docker_compose_language_service", "elixirls", "lua_ls" }
 }
 
 require("mason-lspconfig").setup_handlers {
