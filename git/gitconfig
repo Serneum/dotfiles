@@ -1,10 +1,10 @@
 # Identity Info
 [user]
 	name = Chris Rees
-	email = crees@thecitybase.com
-# 	email = i.am@chrisrees.dev
-	signingkey = A2EC9274403C1C48
-# 	signingkey = DB853917
+# 	email = crees@thecitybase.com
+	email = i.am@chrisrees.dev
+# 	signingkey = A2EC9274403C1C48
+	signingkey = 28F7D8FFB8D23EB5
 
 # Aliases for commands
 [alias]

@@ -14,9 +14,9 @@ if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 fi
 
-plugins=(autojump vundle)
+plugins=(autojump)
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$PATH"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:~/.local/bin:$PATH"
 
 # Add Postgresql
 export PATH="$PATH:/usr/local/opt/postgresql@9.6/bin"
@@ -67,15 +67,13 @@ export FZF_CTRL_T_COMMAND='fd --type f --type d --hidden --follow --exclude .git
 export FZF_DEFAULT_OPTS='--reverse'
 
 autoload -Uz compinit && compinit
-# export ASDF_DIR="$(brew --prefix asdf)/libexec"
-. $(brew --prefix asdf)/libexec/asdf.sh
-# . $(brew --prefix asdf)/asdf.sh
-# . $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
 
-# Add Yarn global
-export PATH="$PATH:$(yarn global bin)"
+eval "export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew";
+export HOMEBREW_CELLAR="/home/linuxbrew/.linuxbrew/Cellar";
+export HOMEBREW_REPOSITORY="/home/linuxbrew/.linuxbrew/Homebrew";
+export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin${PATH+:$PATH}";
+export MANPATH="/home/linuxbrew/.linuxbrew/share/man${MANPATH+:$MANPATH}:";
+export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:${INFOPATH:-}";"
 
-# Add Rust
-export PATH="$PATH:$HOME/.cargo/bin"
-
-eval "$(direnv hook zsh)"
+source ${ZDOTDIR:-~}/.antidote/antidote.zsh
+antidote load
