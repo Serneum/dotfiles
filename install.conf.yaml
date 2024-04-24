@@ -42,8 +42,11 @@
     ~/.config/nvim/init.lua:
       path: vim/init.lua
       force: true
-    ~/.config/nvim/plugin:
-      path: vim/plugin
+    ~/.config/nvim/lua/plugins:
+      path: vim/plugins
+      force: true
+    ~/.config/nvim/lua/config:
+      path: vim/config
       force: true
     ~/.dir_colors:
       path: dircolors/src/dir_colors
