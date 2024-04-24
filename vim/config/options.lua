@@ -39,6 +39,7 @@ vim.api.nvim_create_autocmd({ "VimEnter" }, {
 		end
 
 		-- open the tree, find the file but don't focus it
-		require("nvim-tree.api").tree.toggle({ focus = false, find_file = true })
+		-- require("nvim-tree.api").tree.toggle({ focus = false, find_file = true })
+		vim.cmd("Neotree")
 	end,
 })

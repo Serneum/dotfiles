@@ -14,5 +14,6 @@ return {
 				dotfiles = true,
 			},
 		},
+		enabled = false,
 	},
 }
