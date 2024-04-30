@@ -24,7 +24,6 @@ return {
 		event = "VimEnter",
 	},
 	{ "sitiom/nvim-numbertoggle" },
-	{ "romgrk/barbar.nvim" },
 	{ "mfussenegger/nvim-lint" },
 	-- Show location of errors
 	{
