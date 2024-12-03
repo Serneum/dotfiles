@@ -31,6 +31,8 @@
     stdout: true
   -
     command: mkdir -p ~/.config/nvim
+  -
+    command: mkdir -p ~/.config/lua
 
 - link:
     ~/.bash:
