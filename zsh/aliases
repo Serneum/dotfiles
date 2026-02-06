@@ -4,8 +4,8 @@ alias vim='nvim'
 alias cd..='cd ..'
 alias grep='grep --color=auto'
 
-alias ll='exa -alF'
-alias ls='exa'
+alias ll='eza -alF'
+alias ls='eza'
 
 alias cat='bat'
 
