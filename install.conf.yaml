@@ -33,6 +33,8 @@
     command: mkdir -p ~/.config/nvim
   -
     command: mkdir -p ~/.config/lua
+  -
+    command: mkdir -p ~/.claude/rules
 
 - link:
     ~/.bash:
@@ -40,6 +42,12 @@
       force: true
     ~/.bashrc:
       path: bash/bashrc
+      force: true
+    ~/.claude/rules:
+      path: claude/rules
+      force: true
+    ~/.claude/settings.json:
+      path: claude/settings.json
       force: true
     ~/.config/nvim/init.lua:
       path: vim/init.lua

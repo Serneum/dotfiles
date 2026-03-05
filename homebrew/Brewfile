@@ -26,4 +26,5 @@ brew 'tree'
 brew 'universal-ctags'
 brew 'zsh'
 
+cask 'claude-devtools'
 cask 'font-hack-nerd-font'

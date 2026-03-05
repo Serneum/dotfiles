@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh api:*)",
+      "Read(*)",
+      "Edit(*)",
+      "Write(*)",
+      "Glob(*)",
+      "Grep(*)",
+      "WebFetch(*)",
+      "ListMcpResourcesTool(*)",
+      "ReadMcpResourceTool(*)",
+      "mcp__claude_ai_Atlassian__*",
+      "mcp__claude_ai_Microsoft_Learn__*",
+      "mcp__claude_ai_Cloudflare_Documentation__*"
+    ]
+  },
+  "mcpServers": {
+    "rag-mcp-aws-payments": {
+      "command": "uvx",
+      "args": [
+        "mcp-agentcore-proxy"
+      ],
+      "env": {
+        "AGENTCORE_AGENT_ARN": "arn:aws:bedrock-agentcore:us-east-2:339712830340:runtime/rag_mcp_runtime-K5S3c9F3e8",
+        "AWS_DEFAULT_REGION": "us-east-2",
+        "AWS_PROFILE": "agentcore-cross-account"
+      }
+    }
+  }
+}
