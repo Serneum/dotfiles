@@ -43,6 +43,9 @@
     ~/.bashrc:
       path: bash/bashrc
       force: true
+    ~/.claude.json:
+      path: claude/claude.json
+      force: true
     ~/.claude/rules:
       path: claude/rules
       force: true

@@ -1,0 +1,497 @@
+{
+  "numStartups": 17,
+  "installMethod": "native",
+  "autoUpdates": false,
+  "hasSeenTasksHint": true,
+  "tipsHistory": {
+    "new-user-warmup": 7,
+    "plan-mode-for-complex-tasks": 16,
+    "terminal-setup": 11,
+    "memory-command": 16,
+    "theme-command": 1,
+    "status-line": 1,
+    "prompt-queue": 6,
+    "enter-to-steer-in-relatime": 1,
+    "todo-list": 1,
+    "install-github-app": 11,
+    "install-slack-app": 11,
+    "drag-and-drop-images": 11,
+    "paste-images-mac": 11,
+    "double-esc-code-restore": 11,
+    "continue": 11,
+    "shift-tab": 11,
+    "image-paste": 1,
+    "desktop-app": 16,
+    "web-app": 16,
+    "mobile-app": 16,
+    "custom-agents": 6,
+    "agent-flag": 6,
+    "feedback-command": 6,
+    "permissions": 11,
+    "rename-conversation": 11,
+    "custom-commands": 11
+  },
+  "promptQueueUseCount": 62,
+  "cachedGrowthBookFeatures": {
+    "tengu_1p_event_batch_config": {
+      "scheduledDelayMillis": 10000,
+      "maxExportBatchSize": 400,
+      "maxQueueSize": 8192,
+      "path": "/api/event_logging/v2/batch"
+    },
+    "tengu_mcp_tool_search": true,
+    "tengu_scratch": false,
+    "tengu_brass_pebble": false,
+    "tengu_disable_bypass_permissions_mode": false,
+    "tengu_event_sampling_config": {},
+    "tengu_tool_pear": false,
+    "tengu_log_segment_events": false,
+    "tengu_log_datadog_events": true,
+    "tengu_claudeai_mcp_connectors": true,
+    "tengu_keybinding_customization": false,
+    "tengu_thinkback": false,
+    "tengu_pid_based_version_locking": true,
+    "enhanced_telemetry_beta": false,
+    "tengu_cache_plum_violet": true,
+    "tengu_streaming_tool_execution2": true,
+    "tengu_tool_search_unsupported_models": [
+      "haiku"
+    ],
+    "tengu_attribution_header": true,
+    "tengu_c4w_usage_limit_notifications_enabled": true,
+    "tengu_bash_haiku_prefetch": true,
+    "tengu_marble_anvil": true,
+    "tengu_scarf_coffee": false,
+    "tengu_chomp_inflection": false,
+    "tengu_marble_sandcastle": true,
+    "tengu_penguins_off": null,
+    "tengu_streaming_text": true,
+    "tengu-top-of-feed-tip": {
+      "tip": "",
+      "color": ""
+    },
+    "tengu_turtle_carbon": true,
+    "tengu_pr_status_cli": true,
+    "tengu_ccr_bridge": true,
+    "tengu_mcp_elicitation": false,
+    "tengu_keybinding_customization_release": true,
+    "tengu_post_compact_survey": false,
+    "tengu_pebble_leaf_prune": false,
+    "tengu_system_prompt_global_cache": true,
+    "tengu_mulberry_fog": false,
+    "tengu_coral_fern": true,
+    "tengu_summarize_tool_results": true,
+    "tengu_bergotte_lantern": false,
+    "tengu_swann_brevity": "focused",
+    "tengu_moth_copse": false,
+    "tengu_coral_whistle": false,
+    "tengu_fgts": false,
+    "tengu_tst_kx7": false,
+    "tengu_plan_mode_interview_phase": false,
+    "tengu_prompt_cache_1h_config": {
+      "allowlist": [
+        "repl_main_thread*",
+        "sdk",
+        "auto_mode"
+      ]
+    },
+    "tengu_session_memory": false,
+    "tengu_tool_input_aliasing": false,
+    "tengu_amber_prism": false,
+    "tengu_permission_explainer": true,
+    "tengu_destructive_command_warning": false,
+    "tengu_slate_nexus": true,
+    "tengu_amber_quartz": false,
+    "tengu_grey_wool": true,
+    "tengu_frond_boric": {},
+    "tengu_quiet_hollow": true,
+    "tengu_cicada_nap_ms": 0,
+    "tengu_miraculo_the_bard": false,
+    "tengu_granite_whisper": false,
+    "tengu_quartz_falcon": null,
+    "tengu_desktop_upsell": {
+      "enable_shortcut_tip": false,
+      "enable_startup_dialog": false
+    },
+    "tengu_tangerine_ladder_boost": true,
+    "tengu_glacier_2xr": false,
+    "tengu_swinburne_dune": false,
+    "tengu_sotto_voce": true,
+    "tengu_defer_all_bn4": false,
+    "tengu_tst_hint_m7r": false,
+    "tengu_immediate_model_command": false,
+    "tengu_disable_streaming_to_non_streaming_fallback": false,
+    "tengu_miraculo_the_bard2": false,
+    "tengu_marble_whisper": true,
+    "tengu_basalt_3kr": false,
+    "tengu_plum_vx3": true,
+    "tengu_sm_compact": false,
+    "tengu_compact_cache_prefix": true,
+    "tengu_lean_cast": false,
+    "tengu_compact_streaming_retry": false,
+    "tengu_tight_weave": true,
+    "tengu_auto_background_agents": false,
+    "tengu_kairos_cron": true,
+    "tengu_herring_clock": false,
+    "tengu_kairos_brief_config": {
+      "enable_slash_command": false
+    },
+    "tengu_paper_halyard": false,
+    "tengu_auto_mode_config": {
+      "enabled": "disabled",
+      "twoStageClassifier": true
+    },
+    "tengu_toolref_defer_j8m": false,
+    "tengu_satin_quoll": {},
+    "tengu_copper_wren": false,
+    "tengu_kairos_cron_config": {
+      "recurringFrac": 0.1,
+      "recurringCapMs": 900000,
+      "oneShotMaxMs": 90000,
+      "oneShotFloorMs": 0,
+      "oneShotMinuteMod": 30
+    }
+  },
+  "mcpServers": {
+    "atlassian": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://mcp.atlassian.com/v1/sse"
+      ],
+      "env": {}
+    },
+    "rag-mcp-aws-payments": {
+      "command": "uvx",
+      "args": [
+        "mcp-agentcore-proxy"
+      ],
+      "env": {
+        "AGENTCORE_AGENT_ARN": "arn:aws:bedrock-agentcore:us-east-2:339712830340:runtime/rag_mcp_runtime-K5S3c9F3e8",
+        "AWS_DEFAULT_REGION": "us-east-2",
+        "AWS_PROFILE": "agentcore-cross-account"
+      }
+    }
+  },
+  "userID": "542f0f9ae7eec017de5be7e7c8765920cd16f6562b863590aeb4bcce40418c09",
+  "firstStartTime": "2026-02-24T18:13:50.764Z",
+  "sonnet45MigrationComplete": true,
+  "opus45MigrationComplete": true,
+  "opusProMigrationComplete": true,
+  "thinkingMigrationComplete": true,
+  "projects": {
+    "/Users/christopher.rees/workspace/docdocdoc-template/repositories/device_payment_service": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "datacap.ex",
+        "dc_direct.ex",
+        "vendor_request.ex",
+        "device_payment.ex",
+        "vendor_request_generator.ex"
+      ],
+      "exampleFilesGeneratedAt": 1771958617415
+    },
+    "/Users/christopher.rees/workspace/citybase-iac-live": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {
+        "rag-mcp-aws-payments": {
+          "command": "uvx",
+          "args": [
+            "mcp-agentcore-proxy"
+          ],
+          "env": {
+            "AGENTCORE_AGENT_ARN": "arn:aws:bedrock-agentcore:us-east-2:339712830340:runtime/rag_mcp_runtime-K5S3c9F3e8",
+            "AWS_DEFAULT_REGION": "us-east-2",
+            "AWS_PROFILE": "agentcore-cross-account"
+          }
+        },
+        "atlassian": {
+          "command": "npx",
+          "args": [
+            "-y",
+            "mcp-remote",
+            "https://mcp.atlassian.com/v1/sse"
+          ],
+          "env": {}
+        }
+      },
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false
+    },
+    "/Users/christopher.rees/workspace/github-management": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 2,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "teams.tf",
+        "app_state.tf",
+        "citizen_dashboard.tf",
+        "file_lookup_service.tf",
+        "payment_api.tf"
+      ],
+      "exampleFilesGeneratedAt": 1772680207725,
+      "lastCost": 2.4214935000000004,
+      "lastAPIDuration": 381813,
+      "lastAPIDurationWithoutRetries": 381404,
+      "lastToolDuration": 145207,
+      "lastDuration": 64629602,
+      "lastLinesAdded": 2,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 5774,
+      "lastTotalOutputTokens": 18045,
+      "lastTotalCacheCreationInputTokens": 67804,
+      "lastTotalCacheReadInputTokens": 3035447,
+      "lastTotalWebSearchRequests": 0,
+      "lastFpsAverage": 0.26,
+      "lastFpsLow1Pct": 21.73,
+      "lastModelUsage": {
+        "claude-sonnet-4-6": {
+          "inputTokens": 5774,
+          "outputTokens": 18045,
+          "cacheReadInputTokens": 3035447,
+          "cacheCreationInputTokens": 67804,
+          "webSearchRequests": 0,
+          "costUSD": 2.4214935000000004
+        }
+      },
+      "lastSessionId": "a0280581-a476-411d-bd6b-fe197f7d2402",
+      "lastSessionMetrics": {
+        "frame_duration_ms_count": 16784,
+        "frame_duration_ms_min": 0.05275000000256114,
+        "frame_duration_ms_max": 1456.5405840000021,
+        "frame_duration_ms_avg": 2.517041528775729,
+        "frame_duration_ms_p50": 0.5758544999989681,
+        "frame_duration_ms_p95": 4.103845599989286,
+        "frame_duration_ms_p99": 36.50333433514921,
+        "pre_tool_hook_duration_ms_count": 58,
+        "pre_tool_hook_duration_ms_min": 1,
+        "pre_tool_hook_duration_ms_max": 344,
+        "pre_tool_hook_duration_ms_avg": 29.603448275862068,
+        "pre_tool_hook_duration_ms_p50": 2,
+        "pre_tool_hook_duration_ms_p95": 172.39999999999998,
+        "pre_tool_hook_duration_ms_p99": 277.88,
+        "hook_duration_ms_count": 12,
+        "hook_duration_ms_min": 0,
+        "hook_duration_ms_max": 1,
+        "hook_duration_ms_avg": 0.25,
+        "hook_duration_ms_p50": 0,
+        "hook_duration_ms_p95": 1,
+        "hook_duration_ms_p99": 1
+      }
+    },
+    "/Users/christopher.rees/workspace/observability-iac": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 1,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "main.tf",
+        "variables.tf",
+        "providers.tf",
+        "outputs.tf",
+        "create_url.py"
+      ],
+      "exampleFilesGeneratedAt": 1772807836472,
+      "lastCost": 0,
+      "lastAPIDuration": 0,
+      "lastAPIDurationWithoutRetries": 0,
+      "lastToolDuration": 0,
+      "lastDuration": 149169,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 0,
+      "lastTotalOutputTokens": 0,
+      "lastTotalCacheCreationInputTokens": 0,
+      "lastTotalCacheReadInputTokens": 0,
+      "lastTotalWebSearchRequests": 0,
+      "lastFpsAverage": 0.81,
+      "lastFpsLow1Pct": 108.76,
+      "lastModelUsage": {},
+      "lastSessionId": "c3ddbcd3-3375-40aa-98f5-27d04cf75fb6",
+      "lastSessionMetrics": {
+        "frame_duration_ms_count": 119,
+        "frame_duration_ms_min": 0.07820799999899464,
+        "frame_duration_ms_max": 12.282916000000114,
+        "frame_duration_ms_avg": 1.0309673529411134,
+        "frame_duration_ms_p50": 0.5983339999802411,
+        "frame_duration_ms_p95": 3.3990835999979017,
+        "frame_duration_ms_p99": 8.632840620000467
+      }
+    },
+    "/Users/christopher.rees/workspace": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 2,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "lastCost": 0.21592405,
+      "lastAPIDuration": 67819,
+      "lastAPIDurationWithoutRetries": 67815,
+      "lastToolDuration": 29658,
+      "lastDuration": 116491,
+      "lastLinesAdded": 22,
+      "lastLinesRemoved": 23,
+      "lastTotalInputTokens": 18212,
+      "lastTotalOutputTokens": 4424,
+      "lastTotalCacheCreationInputTokens": 51881,
+      "lastTotalCacheReadInputTokens": 176324,
+      "lastTotalWebSearchRequests": 0,
+      "lastFpsAverage": 12.48,
+      "lastFpsLow1Pct": 223.82,
+      "lastModelUsage": {
+        "claude-sonnet-4-6": {
+          "inputTokens": 11,
+          "outputTokens": 2140,
+          "cacheReadInputTokens": 145557,
+          "cacheCreationInputTokens": 17030,
+          "webSearchRequests": 0,
+          "costUSD": 0.1396626
+        },
+        "claude-haiku-4-5-20251001": {
+          "inputTokens": 18201,
+          "outputTokens": 2284,
+          "cacheReadInputTokens": 30767,
+          "cacheCreationInputTokens": 34851,
+          "webSearchRequests": 0,
+          "costUSD": 0.07626145
+        }
+      },
+      "lastSessionId": "e18bd66a-3210-424f-a250-8a94c9592f12",
+      "lastSessionMetrics": {
+        "frame_duration_ms_count": 1449,
+        "frame_duration_ms_min": 0.046583000003010966,
+        "frame_duration_ms_max": 58.288582999994105,
+        "frame_duration_ms_avg": 0.6469966639059654,
+        "frame_duration_ms_p50": 0.44033349999881466,
+        "frame_duration_ms_p95": 1.353843749999305,
+        "frame_duration_ms_p99": 4.583366660001334,
+        "pre_tool_hook_duration_ms_count": 8,
+        "pre_tool_hook_duration_ms_min": 0,
+        "pre_tool_hook_duration_ms_max": 1,
+        "pre_tool_hook_duration_ms_avg": 0.125,
+        "pre_tool_hook_duration_ms_p50": 0,
+        "pre_tool_hook_duration_ms_p95": 0.6499999999999995,
+        "pre_tool_hook_duration_ms_p99": 0.9299999999999997,
+        "hook_duration_ms_count": 4,
+        "hook_duration_ms_min": 0,
+        "hook_duration_ms_max": 0,
+        "hook_duration_ms_avg": 0,
+        "hook_duration_ms_p50": 0,
+        "hook_duration_ms_p95": 0,
+        "hook_duration_ms_p99": 0
+      }
+    },
+    "/Users/christopher.rees/workspace/citybase-observability": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "projectOnboardingSeenCount": 1,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "modules-euna",
+        "sites.csv",
+        "aws-otel-agent-coralogix-citybase.yaml",
+        ".gitmodules",
+        "main.tf"
+      ],
+      "exampleFilesGeneratedAt": 1772808001379
+    }
+  },
+  "sonnet1m45MigrationComplete": true,
+  "cachedChromeExtensionInstalled": false,
+  "changelogLastFetched": 1773193876334,
+  "autoUpdatesProtectedForNative": true,
+  "claudeCodeFirstTokenDate": "2026-02-27T20:04:58.338401Z",
+  "oauthAccount": {
+    "accountUuid": "da9bf1ee-0d0f-4e11-9aca-b8c4164fb677",
+    "emailAddress": "christopher.rees@eunasolutions.com",
+    "organizationUuid": "5877e6f4-1c40-4482-9b69-395a442c27ff",
+    "hasExtraUsageEnabled": true,
+    "billingType": "stripe_subscription_contracted",
+    "accountCreatedAt": "2026-02-27T20:03:17.483586Z",
+    "subscriptionCreatedAt": "2025-07-31T18:56:33.622650Z",
+    "displayName": "Chris",
+    "organizationRole": "user",
+    "workspaceRole": null,
+    "organizationName": "Euna Solutions"
+  },
+  "hasCompletedOnboarding": true,
+  "lastOnboardingVersion": "2.1.68",
+  "githubRepoPaths": {
+    "citybaseinc/github-management": [
+      "/Users/christopher.rees/workspace/github-management"
+    ],
+    "euna-infrastructure/observability-iac": [
+      "/Users/christopher.rees/workspace/observability-iac"
+    ],
+    "payments-citybase/citybase-observability": [
+      "/Users/christopher.rees/workspace/citybase-observability"
+    ]
+  },
+  "lastReleaseNotesSeen": "2.1.72",
+  "hasShownOpus46Notice": {
+    "5877e6f4-1c40-4482-9b69-395a442c27ff": true
+  },
+  "officialMarketplaceAutoInstallAttempted": true,
+  "officialMarketplaceAutoInstalled": true,
+  "penguinModeOrgEnabled": false,
+  "cachedExtraUsageDisabledReason": null,
+  "ideHintShownCount": 5,
+  "feedbackSurveyState": {
+    "lastShownTime": 1772680903062
+  },
+  "metricsStatusCache": {
+    "enabled": true,
+    "vcsAccountLinkingEnabled": false,
+    "timestamp": 1773235485027
+  },
+  "clientDataCache": {
+    "data": {},
+    "timestamp": 1772807836286
+  },
+  "claudeAiMcpEverConnected": [
+    "claude.ai Cloudflare Documentation",
+    "claude.ai Atlassian",
+    "claude.ai Microsoft Learn",
+    "claude.ai Microsoft 365"
+  ],
+  "skillUsage": {
+    "loop": {
+      "usageCount": 4,
+      "lastUsedAt": 1773174059067
+    }
+  }
+}
