@@ -52,6 +52,9 @@
     ~/.claude/settings.json:
       path: claude/settings.json
       force: true
+    ~/.claude/skills:
+      path: claude/skills
+      force: true
     ~/.config/nvim/init.lua:
       path: vim/init.lua
       force: true

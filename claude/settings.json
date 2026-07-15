@@ -18,5 +18,40 @@
       "WebFetch(*)",
       "Write(*)"
     ]
-  }
+  },
+  "model": "sonnet",
+  "statusLine": {
+    "type": "command",
+    "command": "bash ~/.claude/statusline-command.sh"
+  },
+  "enabledPlugins": {
+    "architecture-docs@procurement-bonfire-plugins": true,
+    "gopls-lsp@claude-plugins-official": true,
+    "agentic-engineering-skills@agentic-engineering-skills": true,
+    "ruby-lsp@claude-plugins-official": true,
+    "warp@claude-code-warp": true
+  },
+  "extraKnownMarketplaces": {
+    "procurement-bonfire-plugins": {
+      "source": {
+        "source": "github",
+        "repo": "Procurement-Bonfire/architecture-docs-plugin"
+      }
+    },
+    "agentic-engineering-skills": {
+      "source": {
+        "source": "github",
+        "repo": "Euna-AI/Agentic-Engineering-Skills"
+      },
+      "autoUpdate": true
+    },
+    "claude-code-warp": {
+      "source": {
+        "source": "github",
+        "repo": "warpdotdev/claude-code-warp"
+      }
+    }
+  },
+  "skipDangerousModePermissionPrompt": true,
+  "skipWorkflowUsageWarning": true
 }
